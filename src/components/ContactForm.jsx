@@ -12,7 +12,7 @@ const ContactForm = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
 
-        const response = await fetch("http://localhost:8000/api/messages/", {
+        const response = await fetch("https://labio.onrender.com/api/messages/", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(formData),
