@@ -42,7 +42,7 @@
     left: 0;
     right: 0;
     flex-direction: column;
-    background-color: #fff;
+    background-color: #130101;
     overflow: hidden;
     max-height: 0;
     transition: max-height 0.3s ease;

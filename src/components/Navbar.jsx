@@ -15,9 +15,9 @@ const Navbar = () => {
         <Link to="/" onClick={() => setIsOpen(false)}>Home</Link>
         <Link to="/about" onClick={() => setIsOpen(false)}>About</Link>
         <Link to="/contact" onClick={() => setIsOpen(false)}>Contact</Link>
-        <Link to="/photos" onClick={() => setIsOpen(false)}>Photos</Link>
+        {/* <Link to="/photos" onClick={() => setIsOpen(false)}>Photos</Link>
         <Link to="/web-design" onClick={() => setIsOpen(false)}>Web Design</Link>
-        <Link to="/videos" onClick={() => setIsOpen(false)}>Videos</Link>
+        <Link to="/videos" onClick={() => setIsOpen(false)}>Videos</Link> */}
       </div>
 
       <div className="hamburger" onClick={toggleMenu}>
