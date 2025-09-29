@@ -1,40 +1,22 @@
-import React, { useState } from "react";
-import "./ContactPage.css";
+import React from "react";
 import ContactForm from "../components/ContactForm";
+import ResumeCard from "../components/ResumeCard";
+import "./ContactPage.css";
 
-function ContactPage() {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    message: "",
-  });
-
-  const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log("Form data submitted:", formData);
-
-    // TODO: Send formData to your Django API
-    alert("Message sent!");
-    
-    // Clear form
-    setFormData({ name: "", email: "", message: "" });
-  };
-
+const ContactPage = () => {
   return (
     <div className="contact-page">
       <h1>Contact Us</h1>
-      <p>Have a project or question? Fill out the form below!</p>
+      <p>Have questions? Send us a message and we will respond promptly.</p>
+      <ContactForm />
+            {/* <h1>Contact Me</h1>
+      <p>Reach out for collaborations, inquiries, or viewing my full CV.</p>
 
-        <section className="contact" id="contact">
-  <ContactForm />
-</section>
-        
+      <ResumeCard /> */}
     </div>
   );
-}
+};
 
 export default ContactPage;
+
+

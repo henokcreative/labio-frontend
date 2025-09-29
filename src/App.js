@@ -3,6 +3,10 @@ import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import LandingPage from "./pages/LandingPage";
 import AboutPage from "./pages/AboutPage";
 import ContactPage from "./pages/ContactPage";
+import PhotosPage from "./pages/PhotosPage";
+// import WebDesignPage from "./pages/WebDesignPage";
+// import VideosPage from "./pages/VideosPage";
+// import PrintDesignPage from "./pages/PrintDesignPage";
 import "./App.css";
 
 function App() {
@@ -22,6 +26,10 @@ function App() {
           <Route path="/" element={<LandingPage />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/contact" element={<ContactPage />} />
+          <Route path="/photos" element={<PhotosPage />} />
+          {/* <Route path="/web-design" element={<WebDesignPage />} /> */}
+          {/* <Route path="/videos" element={<VideosPage />} /> */}
+          {/* <Route path="/print-design" element={<PrintDesignPage />} /> */}
         </Routes>
       </div>
     </Router>

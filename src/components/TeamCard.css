@@ -1,0 +1,20 @@
+.team-card {
+  text-align: center;
+  margin: 20px;
+}
+
+.team-card img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.team-card h3 {
+  margin: 5px 0;
+}
+
+.team-card p {
+  color: #666;
+}

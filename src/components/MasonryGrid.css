@@ -1,0 +1,51 @@
+/* src/components/MasonryGrid.css */
+.my-masonry-grid {
+  display: flex;
+  margin-left: -20px;
+  width: auto;
+}
+.my-masonry-grid_column {
+  padding-left: 20px;
+  background-clip: padding-box;
+}
+
+/* optional spacing between items */
+.my-masonry-grid_column > div {
+  margin-bottom: 20px;
+}
+
+/* src/components/ProjectCard.css */
+.project-card {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  transition: transform 0.2s;
+}
+.project-card:hover {
+  transform: translateY(-5px);
+}
+.project-card img {
+  width: 100%;
+  display: block;
+}
+.project-info {
+  padding: 10px 15px;
+}
+.project-info h3 {
+  margin: 0;
+  font-size: 1.1rem;
+}
+.project-info p {
+  margin: 5px 0;
+  font-size: 0.9rem;
+  color: #555;
+}
+.project-info a {
+  color: #4f46e5;
+  text-decoration: none;
+  font-weight: 600;
+}
+.project-info a:hover {
+  text-decoration: underline;
+}
