@@ -9,7 +9,9 @@ const Navbar = () => {
 
   return (
     <nav className="navbar">
-      <h2 className="logo">Labio</h2>
+<Link to="/">
+  <img src="/assets/logo.svg" alt="Labio Logo" className="logo" />
+</Link>
       
       <div className={`nav-links ${isOpen ? "open" : ""}`}>
         <Link to="/" onClick={() => setIsOpen(false)}>Home</Link>
