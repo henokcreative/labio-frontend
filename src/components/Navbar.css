@@ -1,132 +1,58 @@
-/* Navbar base */
-.labio-navbar {
-  position: relative;
-  background: #ffffff;
-  box-shadow: 0 2px 6px rgba(10,10,10,0.06);
-  z-index: 60;
-}
-
-.labio-nav-inner {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 12px 20px;
+.navbar {
   display: flex;
-  align-items: center;
   justify-content: space-between;
-}
-
-/* Logo */
-.labio-logo {
-  font-weight: 700;
-  color: #111;
-  text-decoration: none;
-  font-size: 1.1rem;
-}
-
-/* Desktop links */
-.labio-nav-links {
-  display: flex;
-  gap: 18px;
   align-items: center;
+  padding: 1rem 2rem;
+  background-color: #fff;
+  position: relative;
+  z-index: 10;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-.labio-nav-links a {
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a {
   text-decoration: none;
   color: #333;
   font-weight: 500;
-  padding: 6px 8px;
-  border-radius: 6px;
-}
-.labio-nav-links a:hover {
-  background: rgba(0,0,0,0.04);
 }
 
-/* Hamburger (hidden on desktop) */
-.labio-hamburger {
+.hamburger {
   display: none;
-  background: transparent;
-  border: none;
+  flex-direction: column;
   cursor: pointer;
-  padding: 8px;
-}
-.labio-hamburger .bar {
-  display: block;
-  width: 24px;
-  height: 2px;
-  margin: 4px 0;
-  background: #222;
-  transition: transform 0.25s ease, opacity 0.25s ease;
+  gap: 5px;
 }
 
-/* Overlay */
-.labio-nav-overlay {
-  display: none;
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,0.35);
-  z-index: 50;
-  opacity: 0;
-  transition: opacity 0.25s ease;
+.hamburger .bar {
+  width: 25px;
+  height: 3px;
+  background-color: #333;
+  transition: 0.3s;
 }
 
 /* Mobile styles */
 @media (max-width: 768px) {
-  .labio-nav-links {
-    position: fixed;
-    top: 0;
-    right: 0;
+  .nav-links {
+    position: absolute;
+    top: 100%;
     left: 0;
-    padding-top: 64px; /* space for header */
+    right: 0;
     flex-direction: column;
-    gap: 0;
-    background: #fff;
-    transform: translateY(-8%);
-    opacity: 0;
-    pointer-events: none;
-    z-index: 55;
-    transition: transform 0.28s ease, opacity 0.28s ease;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    background-color: #fff;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.3s ease;
   }
 
-  .labio-nav-links a {
-    padding: 18px 22px;
-    width: 100%;
-    display: block;
-    border-bottom: 1px solid rgba(0,0,0,0.04);
+  .nav-links.open {
+    max-height: 300px; /* adjust depending on number of links */
   }
 
-  .labio-nav-links.open {
-    transform: translateY(0);
-    opacity: 1;
-    pointer-events: auto;
+  .hamburger {
+    display: flex;
   }
-
-  .labio-hamburger {
-    display: block;
-  }
-
-  .labio-nav-overlay {
-    display: block;
-  }
-
-  .labio-nav-overlay.show {
-    opacity: 1;
-    pointer-events: auto;
-  }
-
-  /* animate hamburger to X when open */
-  .labio-hamburger.open .bar:nth-child(1) {
-    transform: translateY(6px) rotate(45deg);
-  }
-  .labio-hamburger.open .bar:nth-child(2) {
-    opacity: 0;
-  }
-  .labio-hamburger.open .bar:nth-child(3) {
-    transform: translateY(-6px) rotate(-45deg);
-  }
-}
-
-/* prevent background scroll when menu open */
-.no-scroll {
-  overflow: hidden;
 }
