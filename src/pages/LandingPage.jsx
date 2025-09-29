@@ -40,22 +40,6 @@ const projects = [
         <h2>Featured Projects</h2>
         <MasonryGrid items={projects} />
       </section>
-
-      {/* Features Section */}
-      <section className="features">
-        <div className="feature">
-          <h2>Video Tutorials</h2>
-          <p>Learn business essentials for scientists through curated videos.</p>
-        </div>
-        <div className="feature">
-          <h2>Expert Interviews</h2>
-          <p>Hear insights from industry professionals and lab leaders.</p>
-        </div>
-        <div className="feature">
-          <h2>Community</h2>
-          <p>Join a network of like-minded scientists and entrepreneurs.</p>
-        </div>
-      </section>
     </div>
   );
 };

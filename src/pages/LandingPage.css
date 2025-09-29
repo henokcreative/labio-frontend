@@ -61,3 +61,10 @@ body {
 .gallery-item:hover {
   transform: scale(1.05);
 }
+.project-card img {
+  width: 100%;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  aspect-ratio: 1/1 ;
+    object-fit: cover;
+}
