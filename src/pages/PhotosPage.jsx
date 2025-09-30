@@ -1,6 +1,7 @@
-// src/pages/PhotosPage.jsx
-import React from "react";
+import React, { useState } from "react";
 import MasonryGrid from "../components/MasonryGrid";
+import Lightbox from "yet-another-react-lightbox";
+import "yet-another-react-lightbox/styles.css";
 import "./ProjectsGrid.css";
 
 const PhotosPage = () => {
@@ -19,11 +20,39 @@ const PhotosPage = () => {
     { imgUrl: "/assets/photos/purple_fower.jpg", title: "Purple Flower" },
   ];
 
+  const [open, setOpen] = useState(false);
+  const [index, setIndex] = useState(0);
+
+  const openLightbox = (i) => {
+    setIndex(i);
+    setOpen(true);
+  };
+
   return (
     <div className="photos-page">
       <h1>Photography</h1>
       <p>High-quality images captured professionally.</p>
-      <MasonryGrid items={photos} />
+
+      <div className="masonry-grid">
+        {photos.map((photo, i) => (
+          <div key={i} className="masonry-item" onClick={() => openLightbox(i)}>
+            <img src={photo.imgUrl} alt={photo.title} />
+            <div className="photo-overlay">
+              <span>{photo.title}</span>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <Lightbox
+        open={open}
+        close={() => setOpen(false)}
+        index={index}
+        slides={photos.map((photo) => ({
+          src: photo.imgUrl,
+          title: photo.title,
+        }))}
+      />
     </div>
   );
 };
