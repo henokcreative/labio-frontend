@@ -20,7 +20,7 @@ const PhotosPage = () => {
   ];
 
   return (
-    <div className="page-container">
+    <div className="photos-page">
       <h1>Photography</h1>
       <p>High-quality images captured professionally.</p>
       <MasonryGrid items={photos} />

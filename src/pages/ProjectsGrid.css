@@ -1,12 +1,9 @@
 /* ========== PHOTOS PAGE STYLING ========== */
 
-.page-container {
-  padding: 4rem 2rem !important;
-  background-color: #fafafa;
-  color: #222;
-  text-align: center;
-  min-height: 100vh;
-  font-family: "Poppins", sans-serif;
+.photos-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
 }
 
 /* Title + Description */
