@@ -10,6 +10,8 @@ import VideosPage from "./pages/VideosPage";
 import PrintDesignPage from "./pages/PrintDesignPage";
 import Footer from "./components/Footer";
 import "./AppTypography.css";
+import { Link } from "react-router-dom";
+
 
 import "./App.css";
 

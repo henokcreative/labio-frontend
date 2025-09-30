@@ -140,3 +140,39 @@ pre {
   h3 { font-size: 1.25rem; }
   p  { font-size: 0.9rem; }
 }
+
+
+/* ===== Gallery Section ===== */
+.gallery {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.gallery h2 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: #222;
+}
+
+/* Use flexbox for clean layout */
+.gallery-flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 0 2rem;
+}
+
+/* Individual project cards */
+.gallery-item {
+  flex: 1 1 250px;
+  max-width: 300px;
+  text-decoration: none;
+  color: inherit;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+}

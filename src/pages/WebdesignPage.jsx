@@ -2,6 +2,8 @@
 import React from "react";
 import FrontCards from "../components/FrontCards";
 import "./WebdesignPage.css";
+import { Link } from "react-router-dom";
+
 
 const WebdesignPage = () => {
   const services = [
@@ -74,33 +76,20 @@ const WebdesignPage = () => {
         </p>
       </section>
 
-      {/* Services Section */}
-      <section className="services-section">
-        <h2>Our Services</h2>
-        <div className="services-grid">
-          {services.map((service, idx) => (
-            <FrontCards
-              key={idx}
-              title={service.title}
-              subtitle={service.subtitle}
-              imgUrl={service.imgUrl}
-            />
-          ))}
-        </div>
-      </section>
+
 
       {/* Projects Section */}
       <section className="projects-section">
         <h2>Selected Projects</h2>
-        <div className="projects-grid">
+        <div className="gallery-flex">
           {projects.map((project, idx) => (
-            <FrontCards
-              key={idx}
-              title={project.title}
-              subtitle={project.subtitle}
-              imgUrl={project.imgUrl}
-              link={project.link}
-            />
+            <Link key={idx} to={project.link} className="gallery-item">
+              <FrontCards
+                title={project.title}
+                imgUrl={project.imgUrl}
+                link={project.link}
+              />
+            </Link>
           ))}
         </div>
       </section>
