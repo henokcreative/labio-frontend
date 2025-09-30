@@ -1,40 +1,44 @@
 // src/pages/VideosPage.jsx
 import React from "react";
+import "./VideosPage.css";
 
 const VideosPage = () => {
   const videos = [
-    { title: "Lab Workflow", src: "/videos/lab_workflow.mp4" },
-    { title: "Product Demo", src: "/videos/product_demo.mp4" },
-    { title: "Interview with Scientist", src: "/videos/interview.mp4" },
+    { title: "Lab Workflow", link: "https://www.youtube.com/embed/5gzypYXfEos" },
+    { title: "Product Demo", link: "https://www.youtube.com/embed/UNAYz3hqAnc" },
+    { title: "Interview with Scientist", link: "https://www.youtube.com/embed/2gYRmaCT08U" },
+    { title: "Lab Tour", link: "https://www.youtube.com/embed/AcUTazKaNb8" },
   ];
 
   return (
-    <>
-      <section className="hero-section bg-gray-100 py-16 text-center">
-        <h1 className="text-4xl font-bold mb-4">Videography Services</h1>
-        <p className="text-gray-600 max-w-2xl mx-auto">
-          High-quality video production for labs, products, and interviews.
+    <div className="videos-page">
+      {/* Hero Section */}
+      <section className="hero-section">
+        <h1>Videography Services</h1>
+        <p>
+          High-quality video production for labs, products, and interviews,
+          showcasing your work professionally.
         </p>
       </section>
 
-      <section className="px-6 py-12 max-w-6xl mx-auto grid md:grid-cols-3 gap-8">
+      {/* Videos Grid */}
+      <section className="videos-grid">
         {videos.map((video, idx) => (
-          <div
-            key={idx}
-            className="shadow-lg rounded-2xl overflow-hidden bg-white hover:shadow-2xl transition"
-          >
-            <video
-              src={video.src}
-              controls
-              className="w-full h-56 object-cover"
-            />
-            <div className="p-6">
-              <h3 className="text-xl font-semibold mb-2">{video.title}</h3>
+          <div key={idx} className="video-card">
+            <div className="video-wrapper">
+              <iframe
+                src={video.link}
+                title={video.title}
+                allowFullScreen
+              ></iframe>
+            </div>
+            <div className="video-info">
+              <h3>{video.title}</h3>
             </div>
           </div>
         ))}
       </section>
-    </>
+    </div>
   );
 };
 

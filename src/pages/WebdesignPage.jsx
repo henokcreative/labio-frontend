@@ -1,48 +1,110 @@
 // src/pages/WebdesignPage.jsx
 import React from "react";
+import FrontCards from "../components/FrontCards";
+import "./WebdesignPage.css";
 
 const WebdesignPage = () => {
+  const services = [
+    {
+      title: "Corporate Websites",
+      subtitle:
+        "Professional websites tailored to represent your business and convert visitors into clients.",
+      imgUrl: "/images/web1.jpg",
+    },
+    {
+      title: "E-commerce Design",
+      subtitle:
+        "Intuitive and secure online stores that enhance the shopping experience.",
+      imgUrl: "/images/web2.jpg",
+    },
+    {
+      title: "Portfolio Websites",
+      subtitle: "Sleek, minimal designs to showcase your creative work beautifully.",
+      imgUrl: "/images/web3.jpg",
+    },
+  ];
+
+  const projects = [
+    {
+      title: "Turku PET Centre",
+      subtitle: "Webpage design and development",
+      imgUrl: "assets/webdesignDev/thumb-tpc.JPG",
+      link: "https://turkupetcentre.fi",
+    },
+    {
+      title: "InFLAMES Research Flagship",
+      subtitle: "Brand identity, webpage design and development",
+      imgUrl: "assets/webdesignDev/thumb-inflames.JPG",
+      link: "https://inflames.utu.fi",
+    },
+    {
+      title: "BioCity Turku",
+      subtitle: "Brand identity, webpage design and development",
+      imgUrl: "assets/webdesignDev/thumb-bc.JPG",
+      link: "https://biocityturku.fi",
+    },
+        {
+      title: "Turku PET Centre",
+      subtitle: "Webpage design and development",
+      imgUrl: "assets/webdesignDev/thumb-tpc.JPG",
+      link: "https://turkupetcentre.fi",
+    },
+    {
+      title: "InFLAMES Research Flagship",
+      subtitle: "Brand identity, webpage design and development",
+      imgUrl: "assets/webdesignDev/thumb-inflames.JPG",
+      link: "https://inflames.utu.fi",
+    },
+    {
+      title: "BioCity Turku",
+      subtitle: "Brand identity, webpage design and development",
+      imgUrl: "assets/webdesignDev/thumb-bc.JPG",
+      link: "https://biocityturku.fi",
+    },
+  ];
+
   return (
-    <>
-      <section className="hero-section bg-gray-100 py-16 text-center">
-        <h1 className="text-4xl font-bold mb-4">Web Design Services</h1>
-        <p className="text-gray-600 max-w-2xl mx-auto">
-          We design clean, responsive, and powerful websites that express your brand and engage your audience.
+    <div className="webdesign-page">
+      {/* Hero Section */}
+      <section className="hero-section">
+        <h1>Web Design & Development</h1>
+        <p>
+          We create elegant, responsive, and high-performing websites and
+          digital solutions to showcase your brand and engage your audience.
         </p>
       </section>
 
-      <section className="px-6 py-12 max-w-6xl mx-auto grid md:grid-cols-3 gap-8">
-        <div className="shadow-lg rounded-2xl overflow-hidden bg-white hover:shadow-2xl transition">
-          <img src="/images/web1.jpg" alt="Web Project 1" className="w-full h-56 object-cover" />
-          <div className="p-6">
-            <h3 className="text-xl font-semibold mb-2">Corporate Websites</h3>
-            <p className="text-gray-600">
-              Professional websites tailored to represent your business and convert visitors into clients.
-            </p>
-          </div>
-        </div>
-
-        <div className="shadow-lg rounded-2xl overflow-hidden bg-white hover:shadow-2xl transition">
-          <img src="/images/web2.jpg" alt="Web Project 2" className="w-full h-56 object-cover" />
-          <div className="p-6">
-            <h3 className="text-xl font-semibold mb-2">E-commerce Design</h3>
-            <p className="text-gray-600">
-              Intuitive and secure online stores that enhance the shopping experience.
-            </p>
-          </div>
-        </div>
-
-        <div className="shadow-lg rounded-2xl overflow-hidden bg-white hover:shadow-2xl transition">
-          <img src="/images/web3.jpg" alt="Web Project 3" className="w-full h-56 object-cover" />
-          <div className="p-6">
-            <h3 className="text-xl font-semibold mb-2">Portfolio Websites</h3>
-            <p className="text-gray-600">
-              Sleek, minimal designs to showcase your creative work beautifully.
-            </p>
-          </div>
+      {/* Services Section */}
+      <section className="services-section">
+        <h2>Our Services</h2>
+        <div className="services-grid">
+          {services.map((service, idx) => (
+            <FrontCards
+              key={idx}
+              title={service.title}
+              subtitle={service.subtitle}
+              imgUrl={service.imgUrl}
+            />
+          ))}
         </div>
       </section>
-    </>
+
+      {/* Projects Section */}
+      <section className="projects-section">
+        <h2>Selected Projects</h2>
+        <div className="projects-grid">
+          {projects.map((project, idx) => (
+            <FrontCards
+              key={idx}
+              title={project.title}
+              subtitle={project.subtitle}
+              imgUrl={project.imgUrl}
+              link={project.link}
+            />
+          ))}
+        </div>
+      </section>
+    </div>
   );
 };
 

@@ -1,6 +1,7 @@
 // src/pages/PhotosPage.jsx
 import React from "react";
 import MasonryGrid from "../components/MasonryGrid";
+import "./ProjectsGrid.css";
 
 const PhotosPage = () => {
   const photos = [
