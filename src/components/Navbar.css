@@ -42,14 +42,17 @@
     left: 0;
     right: 0;
     flex-direction: column;
-    background-color: #130101;
+  background-color: #e4e2e2;
     overflow: hidden;
     max-height: 0;
     transition: max-height 0.3s ease;
+    z-index: -1;
   }
 
   .nav-links.open {
     max-height: 300px; /* adjust depending on number of links */
+    padding: 2rem;
+    
   }
 
   .hamburger {
