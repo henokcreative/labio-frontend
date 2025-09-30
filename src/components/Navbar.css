@@ -12,12 +12,15 @@
 .nav-links {
   display: flex;
   gap: 1.5rem;
+  
 }
 
 .nav-links a {
   text-decoration: none;
   color: #333;
   font-weight: 500;
+      padding: 0.5rem 2rem;
+
 }
 
 .hamburger {
@@ -51,7 +54,6 @@
 
   .nav-links.open {
     max-height: 300px; /* adjust depending on number of links */
-    padding: 2rem;
     
   }
 
