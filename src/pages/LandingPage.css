@@ -6,35 +6,10 @@ body {
 }
 
 /* ===== Hero Section ===== */
+
 .hero {
-  color: white;
-  text-align: center;
-  padding: 120px 20px;
-}
+      background: url('/public/assets/hero/hero-bg.jpg') center/cover no-repeat;
 
-.hero h1 {
-  font-size: 3rem;
-  margin-bottom: 10px;
-}
-
-.hero p {
-  font-size: 1.2rem;
-  margin-bottom: 20px;
-}
-
-.hero-btn {
-  background-color: #e63946;
-  color: white;
-  border: none;
-  padding: 12px 24px;
-  border-radius: 30px;
-  cursor: pointer;
-  font-size: 1rem;
-  transition: 0.3s;
-}
-
-.hero-btn:hover {
-  background-color: #d62828;
 }
 
 /* ===== Gallery Section ===== */

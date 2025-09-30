@@ -6,41 +6,10 @@
   line-height: 1.6;
 }
 
-/* Hero Section */
-.about-hero {
-  position: relative;
-  width: 100%;
-  height: 60vh;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
+/* hero section */
+.about-page .hero {
+      background: url('/public/assets/hero/about-hero.jpg') center/cover no-repeat;
 }
-
-.about-hero .hero-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  filter: brightness(0.6);
-}
-
-.about-hero .hero-text {
-  position: absolute;
-  color: #fff;
-  max-width: 800px;
-  padding: 0 20px;
-}
-
-.about-hero h1 {
-  font-size: 3rem;
-  margin-bottom: 1rem;
-}
-
-.about-hero p {
-  font-size: 1.25rem;
-}
-
 /* Mission Section */
 .about-mission {
   padding: 60px 20px;

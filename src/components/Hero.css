@@ -1,29 +1,57 @@
+
 .hero {
-  background: url('/public/assets/hero/hero-bg.jpg') center/cover no-repeat;
-  padding: 120px 20px;
+  position: relative; /* Needed for pseudo-element positioning */
+  background-size: cover;
+  background-position: center;
+  color: white;
   text-align: center;
-  color: #fff;
+  padding: 120px 20px;
+  overflow: hidden;
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(238, 241, 243, 0.8); /* Semi-transparent overlay */
+  z-index: 1;
+  transition: background-color 0.3s ease;
 }
 
-.hero-content h1 {
+.hero h1 {
   font-size: 3rem;
+  margin-bottom: 10px;
+   color: #e63946;
+
+}
+
+.hero p {
+  font-size: 1.2rem;
   margin-bottom: 20px;
+    color: white;
+
 }
 
-.hero-content p {
-  font-size: 1.5rem;
-  margin-bottom: 30px;
+.hero-btn {
+  background-color: #e63946;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: 0.3s;
 }
 
-.btn-primary {
-  background-color: #ff4c4c;
-  color: #fff;
-  padding: 12px 30px;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: bold;
+.hero-btn:hover {
+  background-color: #d62828;
+  text-decoration: none !important;
+  color: wheat;
 }
 
-.btn-primary:hover {
-  background-color: #ff1f1f;
+.hero-content {
+  position: relative; /* so content is above overlay */
+  z-index: 1;
 }
