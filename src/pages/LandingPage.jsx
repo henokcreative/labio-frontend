@@ -1,30 +1,19 @@
 // src/pages/LandingPage.jsx
 import React from "react";
 import Hero from "../components/Hero";
-import MasonryGrid from "../components/MasonryGrid";
 import "./LandingPage.css";
 import { Link } from "react-router-dom";
+import FrontCards from "../components/FrontCards";
 
 const LandingPage = () => {
-  // Featured projects for Masonry
+  // Featured projects
+  const projects = [
+    { title: "Photography", imgUrl: "assets/projects/project1.jpg", link: "/photos" },
+    { title: "Web Design", imgUrl: "assets/projects/project2.jpg", link: "/web-design" },
+    { title: "Videography", imgUrl: "assets/projects/project3.jpg", link: "/videos" },
+    { title: "Print Design", imgUrl: "assets/projects/project4.png", link: "/print-design" },
+  ];
 
-  
-
-const projects = [
-  { title: "Photography", imgUrl: "assets/projects/project1.jpg", link: "/photos" },
-  { title: "Web Design", imgUrl: "assets/projects/project2.jpg", link: "/web-design" },
-  { title: "Videography", imgUrl: "assets/projects/project3.jpg", link: "/videos" },
-  { title: "Print Design", imgUrl: "assets/projects/project4.png", link: "/print-design" },
-];
-
-<div className="gallery-grid">
-  {projects.map((project, idx) => (
-    <Link key={idx} to={project.link} className="gallery-item">
-      <img src={project.imgUrl} alt={project.title} />
-      <h3>{project.title}</h3>
-    </Link>
-  ))}
-</div>
   return (
     <div className="landing-page">
       {/* Hero Section */}
@@ -35,10 +24,20 @@ const projects = [
         ctaLink="#projects"
       />
 
-      {/* Featured Projects Masonry */}
+      {/* Featured Projects Section */}
       <section className="gallery" id="projects">
         <h2>Featured Projects</h2>
-        <MasonryGrid items={projects} />
+        <div className="gallery-flex">
+          {projects.map((project, idx) => (
+            <Link key={idx} to={project.link} className="gallery-item">
+              <FrontCards
+                title={project.title}
+                imgUrl={project.imgUrl}
+                link={project.link}
+              />
+            </Link>
+          ))}
+        </div>
       </section>
     </div>
   );

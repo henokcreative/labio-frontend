@@ -26,7 +26,6 @@ const ContactForm = () => {
 
     return (
         <div className="contact-form-container">
-            <h2>Contact Us</h2>
             {success && <p className="success-message">Message sent successfully!</p>}
             <form onSubmit={handleSubmit}>
                 <input type="text" name="name" placeholder="Name" value={formData.name} onChange={handleChange} required />

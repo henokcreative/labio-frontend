@@ -27,36 +27,11 @@ const AboutPage = () => {
         />
         <div className="hero-text">
           <h1>About Labio Creative Studio</h1>
-          <p>
-            We provide digital print, photography, videography, and web
-            development services for small businesses. Our goal is to help you
-            create visually stunning and interactive digital experiences.
-          </p>
+
         </div>
       </section>
 
-      {/* Mission Section */}
-      <section className="about-mission">
-        <h2>Our Mission</h2>
-        <p>
-          Labio empowers scientists and creatives with the knowledge and tools
-          they need to succeed in the business of science and design.
-        </p>
-      </section>
-
-      {/* Services Section */}
-      <section className="services">
-        <h2>Our Services</h2>
-        <div className="services-grid">
-          {services.map((service, idx) => (
-            <div key={idx} className="service-card">
-              <h3>{service}</h3>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* Team Section */}
+            {/* Team Section */}
       <section className="team">
         <h2>Meet the Team</h2>
         <p>Our creative professionals combine expertise in design, tech, and media.</p>
@@ -66,6 +41,35 @@ const AboutPage = () => {
           ))}
         </div>
       </section>
+
+      {/* Mission Section */}
+      <section className="about-mission">
+        <h2>Our Mission</h2>
+        
+        <p>
+          Labio empowers scientists and creatives with the knowledge and tools
+          they need to succeed in the business of science and design.
+        </p>
+      </section>
+
+      {/* Services Section */}
+      <section className="services">
+        <h2>Our Services</h2>
+                  <p>
+            We provide digital print, photography, videography, and web
+            development services for small businesses. Our goal is to help you
+            create visually stunning and interactive digital experiences.
+          </p>
+        <div className="services-grid">
+          {services.map((service, idx) => (
+            <div key={idx} className="service-card">
+              <h3>{service}</h3>
+            </div>
+          ))}
+        </div>
+      </section>
+
+
     </div>
   );
 };
