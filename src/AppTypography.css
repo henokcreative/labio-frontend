@@ -4,12 +4,16 @@
 body {
   font-family: "Poppins", "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #222;
-  background-color: #fafafa !;
   line-height: 1.6;
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
   font-size: 16px;
   max-width: 2200px;
+}
+
+#root {
+      background-color: #fafafa !;
+
 }
 
 /* Headings */
