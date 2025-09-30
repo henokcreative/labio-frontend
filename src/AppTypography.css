@@ -4,7 +4,7 @@
 body {
   font-family: "Poppins", "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #222;
-  background-color: #fafafa;
+  background-color: #fafafa !;
   line-height: 1.6;
   margin: 0;
   padding: 0;
