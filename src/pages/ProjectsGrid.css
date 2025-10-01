@@ -1,32 +1,17 @@
+.photos-page .hero {
+    background-image: none !important;
+}
+
 /* ========== PHOTOS PAGE STYLING ========== */
 
-.photos-page {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 2rem;
-}
 
-/* Title + Description */
-.page-container h1 {
-  font-size: 2.5rem;
-  font-weight: 700;
-  letter-spacing: 1px;
-  color: #111;
-  margin-bottom: 0.5rem;
-  text-transform: uppercase;
-}
-
-.page-container p {
-  font-size: 1.1rem;
-  color: #666;
-  margin-bottom: 3rem;
-}
 
 /* Masonry Grid / Image Gallery */
 .masonry-grid {
   columns: 4 250px;
   column-gap: 1rem;
   padding: 0;
+  margin: 0 2rem !important;
 }
 
 .masonry-item {

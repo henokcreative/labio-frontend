@@ -165,14 +165,11 @@ pre {
 
 /* Individual project cards */
 .gallery-item {
-  flex: 1 1 250px;
-  max-width: 300px;
-  text-decoration: none;
-  color: inherit;
+  flex: 1 1 280px;
+  max-width: 350px;
+  background-color: white;
   border-radius: 12px;
   overflow: hidden;
-  background: #fff;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  position: relative;
+  transition: transform 0.3s;
 }

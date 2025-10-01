@@ -3,6 +3,7 @@ import MasonryGrid from "../components/MasonryGrid";
 import Lightbox from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css";
 import "./ProjectsGrid.css";
+import Hero from "../components/Hero";
 
 const PhotosPage = () => {
   const photos = [
@@ -30,9 +31,13 @@ const PhotosPage = () => {
 
   return (
     <div className="photos-page">
-      <h1>Photography</h1>
-      <p>High-quality images captured professionally.</p>
+              {/* Hero Section */}
+      <Hero
+        title="Photography Services"
+        subtitle=" High-quality images captured professionally."
 
+      />
+   
       <div className="masonry-grid">
         {photos.map((photo, i) => (
           <div key={i} className="masonry-item" onClick={() => openLightbox(i)}>

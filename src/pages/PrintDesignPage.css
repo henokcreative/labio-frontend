@@ -1,29 +1,18 @@
-.printdesign-page {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 2rem;
+.printdesign-page .hero {
+    background-image: none !important;
 }
 
-.page-title {
-  font-size: 2.5rem;
-  font-weight: bold;
-  color: #222;
-  text-align: center;
-  margin-bottom: 0.5rem;
-}
 
-.page-subtitle {
-  font-size: 1.2rem;
-  color: #555;
-  text-align: center;
-  margin-bottom: 2rem;
-}
+
+
+
 
 /* Flexbox columns */
 .columns {
   display: flex;
   gap: 1.5rem;
   justify-content: center;
+  padding: 2rem !important;
 }
 
 .column {

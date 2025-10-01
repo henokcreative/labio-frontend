@@ -3,28 +3,11 @@ import React from "react";
 import FrontCards from "../components/FrontCards";
 import "./WebdesignPage.css";
 import { Link } from "react-router-dom";
+import Hero from "../components/Hero";
 
 
 const WebdesignPage = () => {
-  const services = [
-    {
-      title: "Corporate Websites",
-      subtitle:
-        "Professional websites tailored to represent your business and convert visitors into clients.",
-      imgUrl: "/images/web1.jpg",
-    },
-    {
-      title: "E-commerce Design",
-      subtitle:
-        "Intuitive and secure online stores that enhance the shopping experience.",
-      imgUrl: "/images/web2.jpg",
-    },
-    {
-      title: "Portfolio Websites",
-      subtitle: "Sleek, minimal designs to showcase your creative work beautifully.",
-      imgUrl: "/images/web3.jpg",
-    },
-  ];
+
 
   const projects = [
     {
@@ -67,19 +50,18 @@ const WebdesignPage = () => {
 
   return (
     <div className="webdesign-page">
-      {/* Hero Section */}
-      <section className="hero-section">
-        <h1>Web Design & Development</h1>
-        <p>
-          We create elegant, responsive, and high-performing websites and
-          digital solutions to showcase your brand and engage your audience.
-        </p>
-      </section>
 
 
+     {/* Hero Section */}
+      <Hero
+        title="Web Design & Development"
+        subtitle="We create elegant, responsive, and high-performing websites and
+          digital solutions to showcase your brand and engage your audience."
+   
+      />
 
       {/* Projects Section */}
-      <section className="projects-section">
+      <section className="gallery" id="projects">
         <h2>Selected Projects</h2>
         <div className="gallery-flex">
           {projects.map((project, idx) => (

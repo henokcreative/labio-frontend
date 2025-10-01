@@ -1,6 +1,7 @@
 // src/pages/PrintDesignPage.jsx
 import React from "react";
 import "./PrintDesignPage.css";
+import Hero from "../components/Hero";
 
 const PrintDesignPage = () => {
   const printImages = [
@@ -26,10 +27,15 @@ const PrintDesignPage = () => {
 
   return (
     <div className="printdesign-page">
-      <h1 className="page-title">Print Design Projects</h1>
-      <p className="page-subtitle">
-        A showcase of our professional print design work including brochures, posters, and publications.
-      </p>
+ 
+
+
+     {/* Hero Section */}
+      <Hero
+        title="Web & Print Design Projects"
+        subtitle="A showcase of our professional print design work including brochures, posters, and publications."
+   
+      />
 
       <div className="columns">
         {printImages.map((column, colIdx) => (

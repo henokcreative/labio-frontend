@@ -1,6 +1,7 @@
 // src/pages/VideosPage.jsx
 import React from "react";
 import "./VideosPage.css";
+import Hero from "../components/Hero";
 
 const VideosPage = () => {
   const videos = [
@@ -12,31 +13,37 @@ const VideosPage = () => {
 
   return (
     <div className="videos-page">
+
       {/* Hero Section */}
-      <section className="hero-section">
-        <h1>Videography Services</h1>
-        <p>
-          High-quality video production for labs, products, and interviews,
-          showcasing your work professionally.
-        </p>
-      </section>
+      <Hero
+        title="Videography Services"
+        subtitle=" High-quality video production for labs, products, and interviews,
+          showcasing your work professionally.We create elegant, responsive, and high-performing websites and
+          digital solutions to showcase your brand and engage your audience."
+
+      />
 
       {/* Videos Grid */}
-      <section className="videos-grid">
-        {videos.map((video, idx) => (
-          <div key={idx} className="video-card">
-            <div className="video-wrapper">
-              <iframe
-                src={video.link}
-                title={video.title}
-                allowFullScreen
-              ></iframe>
+   <section className="gallery" id="projects">
+        <h2>Featured Projects</h2>
+        <div className="gallery-flex">
+          {videos.map((video, idx) => (
+            <div key={idx} className="gallery-item">
+              <div className="video-frame">
+                <iframe
+                  src={video.link}
+                  title={video.title}
+                  allowFullScreen
+                  
+                  
+                ></iframe>
+              </div>
+              {/* <div className="Front-info">
+                <h3>{video.title}</h3>
+              </div> */}
             </div>
-            <div className="video-info">
-              <h3>{video.title}</h3>
-            </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </section>
     </div>
   );
