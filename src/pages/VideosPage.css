@@ -1,7 +1,19 @@
+
 .videos-page .hero {
     background-image: none !important;
 }
+.videos-page {
+  margin: 0 auto;
+}
 
+/* Videos Grid */
+.videos-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem;
+}
 
 .video-card {
   flex: 1 1 280px;
@@ -13,6 +25,9 @@
   transition: transform 0.3s;
 }
 
+.video-card:hover {
+  transform: scale(1.03);
+}
 
 .video-wrapper {
   position: relative;

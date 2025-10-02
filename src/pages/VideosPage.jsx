@@ -19,13 +19,12 @@ const VideosPage = () => {
         title="Videography Services"
         subtitle=" High-quality video production for labs, products, and interviews,
           showcasing your work professionally."
-   
       />
 
       {/* Videos Grid */}
-      <section className="gallery" id="projects">
+      <section className="videos-grid">
         {videos.map((video, idx) => (
-          <div key={idx} className="gallery-flex">
+          <div key={idx} className="video-card">
             <div className="video-wrapper">
               <iframe
                 src={video.link}
