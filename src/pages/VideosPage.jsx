@@ -18,8 +18,7 @@ const VideosPage = () => {
       <Hero
         title="Videography Services"
         subtitle=" High-quality video production for labs, products, and interviews,
-          showcasing your work professionally.We create elegant, responsive, and high-performing websites and
-          digital solutions to showcase your brand and engage your audience."
+          showcasing your work professionally."
    
       />
 
