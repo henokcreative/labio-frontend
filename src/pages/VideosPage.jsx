@@ -18,25 +18,23 @@ const VideosPage = () => {
       <Hero
         title="Videography Services"
         subtitle=" High-quality video production for labs, products, and interviews,
-          showcasing your work professionally."
+          showcasing your work professionally.We create elegant, responsive, and high-performing websites and
+          digital solutions to showcase your brand and engage your audience."
    
       />
 
       {/* Videos Grid */}
       <section className="gallery" id="projects">
-        <h2>Featured Projects</h2>
         {videos.map((video, idx) => (
           <div key={idx} className="gallery-flex">
-            <div className="gallery-item">
-              
+            <div className="video-wrapper">
               <iframe
                 src={video.link}
                 title={video.title}
                 allowFullScreen
               ></iframe>
-              
             </div>
-            <div className="Front-info">
+            <div className="video-info">
               <h3>{video.title}</h3>
             </div>
           </div>
