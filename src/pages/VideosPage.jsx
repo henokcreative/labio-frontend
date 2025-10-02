@@ -13,37 +13,34 @@ const VideosPage = () => {
 
   return (
     <div className="videos-page">
-
-      {/* Hero Section */}
+ 
+        {/* Hero Section */}
       <Hero
         title="Videography Services"
         subtitle=" High-quality video production for labs, products, and interviews,
-          showcasing your work professionally.We create elegant, responsive, and high-performing websites and
-          digital solutions to showcase your brand and engage your audience."
-
+          showcasing your work professionally."
+   
       />
 
       {/* Videos Grid */}
-   <section className="gallery" id="projects">
+      <section className="gallery" id="projects">
         <h2>Featured Projects</h2>
-        <div className="gallery-flex">
-          {videos.map((video, idx) => (
-            <div key={idx} className="gallery-item">
-              <div className="video-frame">
-                <iframe
-                  src={video.link}
-                  title={video.title}
-                  allowFullScreen
-                  
-                  
-                ></iframe>
-              </div>
-              {/* <div className="Front-info">
-                <h3>{video.title}</h3>
-              </div> */}
+        {videos.map((video, idx) => (
+          <div key={idx} className="gallery-flex">
+            <div className="gallery-item">
+              
+              <iframe
+                src={video.link}
+                title={video.title}
+                allowFullScreen
+              ></iframe>
+              
             </div>
-          ))}
-        </div>
+            <div className="Front-info">
+              <h3>{video.title}</h3>
+            </div>
+          </div>
+        ))}
       </section>
     </div>
   );
