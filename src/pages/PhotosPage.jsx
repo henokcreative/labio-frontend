@@ -20,7 +20,6 @@ const PhotosPage = () => {
     { imgUrl: "/assets/photos/Bumbel_bee.jpg", title: "Bumble Bee" },
     { imgUrl: "/assets/photos/purple_fower.jpg", title: "Purple Flower" },
   ];
-
   const [open, setOpen] = useState(false);
   const [index, setIndex] = useState(0);
 
@@ -35,7 +34,6 @@ const PhotosPage = () => {
       <Hero
         title="Photography Services"
         subtitle=" High-quality images captured professionally."
-
       />
    
       <div className="masonry-grid">

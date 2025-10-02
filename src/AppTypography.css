@@ -160,7 +160,7 @@ pre {
   flex-wrap: wrap;
   justify-content: center;
   gap: 1.5rem;
-  padding: 0 2rem;
+  /* padding: 0 2rem; */
 }
 
 /* Individual project cards */
@@ -172,4 +172,15 @@ pre {
   overflow: hidden;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s;
+  min-height: 300px !important;
+}
+
+
+  /* 1 per row on mobile */
+@media (max-width: 576px) {
+
+ .gallery-item {
+    flex: 1 1 45%;
+    max-width: 45%;
+  }
 }
