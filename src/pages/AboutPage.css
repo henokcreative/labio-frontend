@@ -33,6 +33,8 @@
 .services {
   padding: 60px 20px;
   text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 .services h2 {
@@ -94,3 +96,11 @@
   max-width: 1000px;
   margin: 0 auto;
 }
+
+ /* about article */
+
+ .about-article {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 0 20px;
+text-align: center;}
