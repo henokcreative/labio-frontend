@@ -1,6 +1,7 @@
 import React from "react";
 import ContactForm from "../components/ContactForm";
 import ResumeCard from "../components/ResumeCard";
+import TeamCard from "../components/TeamCard";
 import "./ContactPage.css";
 
 const ContactPage = () => {

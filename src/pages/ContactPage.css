@@ -12,3 +12,39 @@
   margin-bottom: 40px;
   color: #555;
 }
+
+/* Team Section */
+.team {
+  padding: 60px 20px;
+  background-color: #f9fafb;
+  text-align: center;
+}
+
+.team h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.team p {
+  margin-bottom: 2rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  color: #4b5563;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+ /* about article */
+
+ .about-article {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 0 20px;
+text-align: center;}
