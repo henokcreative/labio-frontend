@@ -13,6 +13,17 @@ const ContactPage = () => {
       <p>Reach out for collaborations, inquiries, or viewing my full CV.</p>
 
       <ResumeCard /> */}
+
+                {/* Team Section */}
+            <section className="team">
+                <h2>Meet the Team</h2>
+                <p>Our creative professionals combine expertise in design, tech, and media.</p>
+                <div className="team-grid">
+                    {team.map((member, idx) => (
+                        <TeamCard key={idx} {...member} />
+                    ))}
+                </div>
+            </section>
     </div>
   );
 };

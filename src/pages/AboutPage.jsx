@@ -51,17 +51,8 @@ const AboutPage = () => {
 
 
             </section>
-                        {/* Team Section */}
-            <section className="team">
-                <h2>Meet the Team</h2>
-                <p>Our creative professionals combine expertise in design, tech, and media.</p>
-                <div className="team-grid">
-                    {team.map((member, idx) => (
-                        <TeamCard key={idx} {...member} />
-                    ))}
-                </div>
-            </section>
-             {/* Services Section */}
+
+            {/* Services Section */}
             <section className="about-article">
                 <h3>The Unsung Role of Multimedia in Modern Science Communication</h3>
 
