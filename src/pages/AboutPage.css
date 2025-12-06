@@ -1,15 +1,23 @@
 /* src/pages/AboutPage.css */
 
+/* General Page Styles */
 .about-page {
   font-family: 'Inter', sans-serif;
   color: #1f2937;
   line-height: 1.6;
 }
 
-/* hero section */
+/* Hero Section */
 .about-page .hero {
-      background: url('/public/assets/hero/about-hero.jpg') center/cover no-repeat;
+  background: url('/public/assets/hero/about-hero.jpg') center/cover no-repeat;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
 }
+
 /* Mission Section */
 .about-mission {
   padding: 60px 20px;
@@ -24,16 +32,17 @@
 }
 
 .about-mission p {
-  font-size: 1.1rem;
+  font-size: 1.125rem; /* consistent with services */
   max-width: 700px;
   margin: 0 auto;
+  color: #4b5563; /* subtle secondary text color */
 }
 
 /* Services Section */
 .services {
   padding: 60px 20px;
   text-align: center;
-  max-width: 800px;
+  max-width: 1000px;
   margin: 0 auto;
 }
 
@@ -47,8 +56,6 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 20px;
-  max-width: 1000px;
-  margin: 0 auto;
 }
 
 .service-card {
@@ -57,6 +64,7 @@
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   transition: transform 0.3s, box-shadow 0.3s;
+  text-align: center;
 }
 
 .service-card:hover {
@@ -66,41 +74,12 @@
 
 .service-card h3 {
   font-size: 1.25rem;
+  margin-bottom: 0.75rem; /* consistent spacing */
   color: #111827;
 }
 
-/* Team Section */
-.team {
-  padding: 60px 20px;
-  background-color: #f9fafb;
-  text-align: center;
+.service-card p {
+  font-size: 1.125rem;
+  color: #4b5563; /* same as mission text */
+  line-height: 1.5;
 }
-
-.team h2 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-}
-
-.team p {
-  margin-bottom: 2rem;
-  max-width: 700px;
-  margin-left: auto;
-  margin-right: auto;
-  color: #4b5563;
-}
-
-.team-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 30px;
-  max-width: 1000px;
-  margin: 0 auto;
-}
-
- /* about article */
-
- .about-article {
-  max-width: 800px;
-  margin: 40px auto;
-  padding: 0 20px;
-text-align: center;}
