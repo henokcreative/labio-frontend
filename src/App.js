@@ -1,5 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Analytics } from "@vercel/analytics/react";
 import Navbar from "./components/Navbar"; // import new Navbar
 import LandingPage from "./pages/LandingPage";
 import AboutPage from "./pages/AboutPage";
@@ -30,6 +31,7 @@ function App() {
           <Route path="/print-design" element={<PrintDesignPage />} />
         </Routes>
         <Footer /> {/* consistent footer across all pages */}
+        <Analytics />
       </div>
     </Router>
   );
