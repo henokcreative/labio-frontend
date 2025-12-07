@@ -4,19 +4,19 @@ import "./AboutPage.css";
 import Hero from "../components/Hero";
 import { Link } from "react-router-dom";
 import "./LandingPage.css";
-import FrontCards from "../components/FrontCards";
+import FrontCards from "../components/projectsCards";
 
 const AboutPage = () => {
     const team = [
         { name: "Henok", role: "Founder & Creative Director", imgUrl: "assets/team/henok.jpg" },
         // { name: "Jane Doe", role: "Lead Scientist", imgUrl: "/team/jane.jpg" },
     ];
-  const projects = [
-    { title: "Photography", imgUrl: "assets/projects/project1.jpg", link: "/photos" },
-    { title: "Web Design", imgUrl: "assets/projects/project2.jpg", link: "/web-design" },
-    { title: "Videography", imgUrl: "assets/projects/project3.jpg", link: "/videos" },
-    { title: "Print Design", imgUrl: "assets/projects/project4.png", link: "/print-design" },
-  ];
+    const projects = [
+        { title: "Photography", imgUrl: "assets/projects/project1.jpg", link: "/photos" },
+        { title: "Web Design", imgUrl: "assets/projects/project2.jpg", link: "/web-design" },
+        { title: "Videography", imgUrl: "assets/projects/project3.jpg", link: "/videos" },
+        { title: "Print Design", imgUrl: "assets/projects/project4.png", link: "/print-design" },
+    ];
     return (
         <div className="about-page">
             {/* Hero Section */}
@@ -54,21 +54,21 @@ const AboutPage = () => {
                     Ultimately, the goal is not just to make science look good, but to make it understood. Because when research is seen and appreciated by wider audiences, it has a greater chance to inspire action, foster collaboration, and drive innovation.
                 </p>
             </section>
-       {/* Featured Projects Section */}
-      <section className="gallery" id="projects">
-        <h2>Featured Projects</h2>
-        <div className="gallery-flex">
-          {projects.map((project, idx) => (
-            <Link key={idx} to={project.link} className="gallery-item">
-              <FrontCards
-                title={project.title}
-                imgUrl={project.imgUrl}
-                link={project.link}
-              />
-            </Link>
-          ))}
-        </div>
-      </section>
+            {/* Featured Projects Section */}
+            <section className="gallery" id="projects">
+                <h2>Featured Projects</h2>
+                <div className="gallery-flex">
+                    {projects.map((project, idx) => (
+                        <Link key={idx} to={project.link} className="gallery-item">
+                            <FrontCards
+                                title={project.title}
+                                imgUrl={project.imgUrl}
+                                link={project.link}
+                            />
+                        </Link>
+                    ))}
+                </div>
+            </section>
         </div>
     );
 };

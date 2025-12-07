@@ -1,6 +1,6 @@
 // src/pages/WebdesignPage.jsx
 import React from "react";
-import FrontCards from "../components/FrontCards";
+import FrontCards from "../components/projectsCards";
 import "./WebdesignPage.css";
 import { Link } from "react-router-dom";
 import Hero from "../components/Hero";

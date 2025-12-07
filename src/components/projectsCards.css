@@ -1,4 +1,4 @@
-.Front-card {
+.projects-card {
   position: relative;
   overflow: hidden;
   border-radius: 1rem;
@@ -7,7 +7,7 @@
   height: 100% !important;
 }
 
-.Front-card img {
+.projects-card img {
   width: 100%;
   height: 100%;
   display: block;
@@ -15,12 +15,12 @@
   object-fit: cover;
 }
 
-.Front-card:hover img {
+.projects-card:hover img {
   transform: scale(1.05);
 }
 
 /* Overlay */
-.Front-card::before {
+.projects-card::before {
   content: "";
   position: absolute;
   top: 0;
@@ -31,43 +31,52 @@
   transition: background-color 0.3s ease;
 }
 
-.Front-card:hover::before {
-  background-color: rgba(0, 0, 0, 0.6);
+.projects-card:hover::before {
+  background-color: rgba(0, 0, 0, 0.823);
 }
 
-.Front-info {
+.projects-info {
   position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;           /* or width: 90% if you want some side padding */
   padding: 1rem;
   color: #fff;
   z-index: 2;
-  text-align: left;
-  display: block;
+  text-align: center;    /* center text */
+  display: flex;
+  flex-direction: column;
+  align-items: center;   /* center children horizontally */
+  justify-content: center;
+  margin: 0;             /* fix typo from 1re -> 1rem if present */
 }
 
-.Front-info h3 {
+.projects-info h3 {
   margin: 0;
   font-size: 1.25rem;
 }
 
-.Front-info p {
+
+.projects-info p {
   margin: 0.25rem 0 0;
   font-size: 0.9rem;
 }
 
-.Front-info a {
+.projects-info a {
   display: inline-block;
   margin-top: 0.5rem;
   padding: 0.4rem 0.8rem;
-  background-color: #ff0000; /* or your brand color */
+  background-color: #ff0000; 
   color: #fff;
   border-radius: 0.5rem;
   text-decoration: none;
   transition: background-color 0.3s ease;
+  text-align: center;
 }
 
-.Front-info a:hover {
+.projects-info a:hover {
   background-color: #e60000;
+    color: #fff;
+
 }

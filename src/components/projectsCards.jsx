@@ -1,12 +1,12 @@
-// src/components/FrontCards.jsx
+// src/components/projectsCards.jsx
 import React from "react";
-import "./FrontCards.css";
+import "./projectsCards.css";
 
-const FrontCards = ({ title, subtitle, imgUrl, link }) => {
+const projectsCards = ({ title, subtitle, imgUrl, link }) => {
   return (
-    <div className="Front-card">
+    <div className="projects-card">
       <img src={imgUrl} alt={title} />
-      <div className="Front-info">
+      <div className="projects-info">
         <h3>{title}</h3>
         {subtitle && <p>{subtitle}</p>}
         {link && (
@@ -19,4 +19,4 @@ const FrontCards = ({ title, subtitle, imgUrl, link }) => {
   );
 };
 
-export default FrontCards;
+export default projectsCards;

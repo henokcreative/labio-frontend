@@ -3,7 +3,7 @@ import React from "react";
 import Hero from "../components/Hero";
 import "./LandingPage.css";
 import { Link } from "react-router-dom";
-import FrontCards from "../components/FrontCards";
+import FrontCards from "../components/projectsCards";
 
 const LandingPage = () => {
   // Featured projects
