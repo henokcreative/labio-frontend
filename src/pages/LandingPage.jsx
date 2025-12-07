@@ -3,7 +3,7 @@ import React from "react";
 import Hero from "../components/Hero";
 import "./LandingPage.css";
 import { Link } from "react-router-dom";
-import FrontCards from "../components/projectsCards";
+import ProjectCards from "../components/projectsCards";
 
 const LandingPage = () => {
   // Featured projects
@@ -30,7 +30,7 @@ const LandingPage = () => {
         <div className="gallery-flex">
           {projects.map((project, idx) => (
             <Link key={idx} to={project.link} className="gallery-item">
-              <FrontCards
+              <ProjectCards
                 title={project.title}
                 imgUrl={project.imgUrl}
                 link={project.link}

@@ -4,7 +4,7 @@ import "./AboutPage.css";
 import Hero from "../components/Hero";
 import { Link } from "react-router-dom";
 import "./LandingPage.css";
-import FrontCards from "../components/projectsCards";
+import ProjectCard from "../components/projectsCards";
 
 const AboutPage = () => {
     const team = [
@@ -60,7 +60,7 @@ const AboutPage = () => {
                 <div className="gallery-flex">
                     {projects.map((project, idx) => (
                         <Link key={idx} to={project.link} className="gallery-item">
-                            <FrontCards
+                            <ProjectCard
                                 title={project.title}
                                 imgUrl={project.imgUrl}
                                 link={project.link}
