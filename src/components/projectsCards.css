@@ -18,6 +18,13 @@
 .projects-card:hover img {
   transform: scale(1.05);
 }
+.projects-card:hover h3 {
+  transform: scale(1.1);
+  font-weight: bold;
+  color: #ffc;
+  text-shadow: black 1px 1px 2px;
+
+}
 
 /* Overlay */
 .projects-card::before {
@@ -55,6 +62,7 @@
 .projects-info h3 {
   margin: 0;
   font-size: 1.25rem;
+   text-shadow: #ffc 1px 1px 2px;
 }
 
 
