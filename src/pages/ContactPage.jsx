@@ -4,8 +4,6 @@ import ResumeCard from "../components/ResumeCard";
 import TeamCard from "../components/TeamCard";
 import "./ContactPage.css";
 import { Link } from "react-router-dom";
-
-
 const ContactPage = () => {
   const team = [
     { name: "Henok", role: "Founder & Creative Director", imgUrl: "assets/team/henok.jpg", link: "/resume" },
@@ -13,13 +11,6 @@ const ContactPage = () => {
   ];
   return (
     <div className="contact-page">
-      <h2>Contact Us</h2>
-      <p>Have questions? Send us a message and we will respond promptly.</p>
-      <ContactForm />
-
-
-      
-
       {/* Team Section */}
       <section className="team">
         <h2>Meet the Team</h2>
@@ -28,13 +19,15 @@ const ContactPage = () => {
           {team.map((member, idx) => (
             <TeamCard key={idx} {...member} />
           ))}
-       
         </div>
+      </section>
+        {/* contact form Section */}
+      <section className="contact-form-section">
+        <h2>Contact Us</h2>
+        <p>Have questions? Send us a message and we will respond promptly.</p>
+        <ContactForm />
       </section>
     </div>
   );
 };
-
 export default ContactPage;
-
-

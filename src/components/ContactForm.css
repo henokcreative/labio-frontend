@@ -14,18 +14,6 @@
   border: 1px solid #ccc;
 }
 
-.contact-form-container button {
-  padding: 10px 20px;
-  background-color: #2575fc;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.contact-form-container button:hover {
-  background-color: #6a11cb;
-}
 
 .success-message {
   color: green;
