@@ -85,7 +85,8 @@ a {
   transition: var(--transition);
 }
 a:hover {
-  color: var(--color-primary-dark);
+  color: var(--color-light);
+  text-decoration: none;
 }
 
 button, .btn {
