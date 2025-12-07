@@ -1,6 +1,7 @@
 .team-card {
   text-align: center;
-  margin: 20px;
+  margin: 20px auto;
+  max-width: 200px;
 }
 
 .team-card img {

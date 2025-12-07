@@ -8,9 +8,11 @@
   padding: 30px;
   border-radius: 12px;
   box-shadow: 0 6px 15px rgba(0,0,0,0.1);
-  max-width: 900px;
+  max-width: 600px;
   margin: 40px auto;
   align-items: center;
+  flex-direction: column;
+  text-align: center;
 }
 
 .resume-headshot img {
@@ -18,5 +20,48 @@
   height: 80px;
   border-radius: 50%;
   object-fit: cover;
+  border: 3px solid #4f46e5;
 }
 
+.resume-info {
+  flex: 1;
+  min-width: 250px;
+}
+
+.resume-info h2 {
+  margin: 0;
+  font-size: 1.8rem;
+  color: #111827;
+}
+
+.resume-info h3 {
+  margin: 5px 0 15px;
+  font-size: 1.2rem;
+  color: #4b5563;
+}
+
+.resume-info ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+.resume-info li {
+  margin-bottom: 8px;
+  font-size: 0.95rem;
+}
+
+.resume-info a {
+  color: #4f46e5;
+  text-decoration: none;
+}
+
+.resume-info a:hover {
+  text-decoration: underline;
+}
+
+
+
+.resume-btn:hover {
+  background-color: #4338ca;
+}

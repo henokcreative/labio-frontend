@@ -3,21 +3,22 @@ import ContactForm from "../components/ContactForm";
 import ResumeCard from "../components/ResumeCard";
 import TeamCard from "../components/TeamCard";
 import "./ContactPage.css";
+import { Link } from "react-router-dom";
+
 
 const ContactPage = () => {
   const team = [
-    { name: "Henok", role: "Founder & Creative Director", imgUrl: "assets/team/henok.jpg" },
-    // { name: "Jane Doe", role: "Lead Scientist", imgUrl: "/team/jane.jpg" },
+    { name: "Henok", role: "Founder & Creative Director", imgUrl: "assets/team/henok.jpg", link: "/resume" },
+    //{ name: "Jane Doe", role: "Lead Scientist", imgUrl: "/team/jane.jpg" },
   ];
   return (
     <div className="contact-page">
-      <h1>Contact Us</h1>
+      <h2>Contact Us</h2>
       <p>Have questions? Send us a message and we will respond promptly.</p>
       <ContactForm />
-      <h1>Contact Me</h1>
-      <p>Reach out for collaborations, inquiries, or viewing my full CV.</p>
 
-      <ResumeCard />
+
+      
 
       {/* Team Section */}
       <section className="team">
@@ -27,6 +28,7 @@ const ContactPage = () => {
           {team.map((member, idx) => (
             <TeamCard key={idx} {...member} />
           ))}
+       
         </div>
       </section>
     </div>

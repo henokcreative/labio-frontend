@@ -2,9 +2,10 @@
 import React from "react";
 import "./ResumeCard.css";
 
+
 const ResumeCard = () => {
   return (
-    <div className="card">
+    <div className="resume-card">
       <div className="resume-headshot">
         <img src="assets/team/henok.jpg" alt="Henok Karvonen" />
       </div>
