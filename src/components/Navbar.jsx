@@ -9,11 +9,12 @@ const Navbar = () => {
 
   return (
     <nav className="navbar">
-<Link to="/">
-  <img src="/assets/logo.svg" alt="Labio Logo" className="logo" />
-</Link>
-      
+      <Link to="/">
+        <img src="/assets/logo.svg" alt="Labio Logo" className="logo" />
+      </Link>
+
       <div className={`nav-links ${isOpen ? "open" : ""}`}>
+        <Link to="/resume" onClick={() => setIsOpen(false)}>Resume</Link>
         <Link to="/" onClick={() => setIsOpen(false)}>Home</Link>
         <Link to="/about" onClick={() => setIsOpen(false)}>About</Link>
         <Link to="/contact" onClick={() => setIsOpen(false)}>Contact</Link>

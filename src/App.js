@@ -8,6 +8,7 @@ import PhotosPage from "./pages/PhotosPage";
 import WebdesignPage from "./pages/WebdesignPage";
 import VideosPage from "./pages/VideosPage";
 import PrintDesignPage from "./pages/PrintDesignPage";
+import ResumePage from "./pages/ResumePage";
 import Footer from "./components/Footer";
 import "./AppTypography.css";
 
@@ -28,6 +29,7 @@ function App() {
           <Route path="/web-design" element={<WebdesignPage />} />
           <Route path="/videos" element={<VideosPage />} />
           <Route path="/print-design" element={<PrintDesignPage />} />
+           <Route path="/resume" element={<ResumePage/>} />
         </Routes>
         <Footer /> {/* consistent footer across all pages */}
       </div>

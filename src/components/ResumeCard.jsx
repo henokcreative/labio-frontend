@@ -6,7 +6,7 @@ const ResumeCard = () => {
   return (
     <div className="resume-card">
       <div className="resume-headshot">
-        <img src="/team/henok.jpg" alt="Henok Karvonen" />
+        <img src="assets/team/henok.jpg" alt="Henok Karvonen" />
       </div>
       <div className="resume-info">
         <h2>Henok Karvonen</h2>
