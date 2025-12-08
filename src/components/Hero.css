@@ -26,11 +26,18 @@
    color: #e63946;
 
 }
+.hero h4 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+   color: #e63946;
+
+}
 
 .hero p {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   margin-bottom: 20px;
     color: #e63946;
+    font-weight: bolder !important;
 
 }
 
