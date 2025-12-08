@@ -13,14 +13,22 @@ const VideosPage = () => {
 
   return (
     <div className="videos-page">
- 
-        {/* Hero Section */}
+
+      {/* Hero Section */}
       <Hero
         title="Videography Services"
         subtitle=" High-quality video production for labs, products, and interviews,
           showcasing your work professionally."
       />
-
+      <section className="intro-text">
+        <p>
+          At Labio Creative Studio, we specialize in creating compelling
+          videography content tailored for scientific and creative audiences.
+          Whether you need promotional videos, product demos, or interviews,
+          our team is dedicated to bringing your vision to life with high
+          production values and storytelling expertise.
+        </p>
+      </section>
       {/* Videos Grid */}
       <section className="videos-grid">
         {videos.map((video, idx) => (

@@ -16,8 +16,8 @@
 }
 
 .video-card {
-  flex: 1 1 280px;
-  max-width: 350px;
+  flex: 1 1 420px;
+  max-width: 480px;
   background-color: white;
   border-radius: 12px;
   overflow: hidden;
