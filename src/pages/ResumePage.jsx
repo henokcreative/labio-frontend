@@ -47,15 +47,7 @@ const resumePage = () => {
 
             <div className="sectionContent">
               <p>
-                I am an experienced multimedia producer at Turku Bioscience Centre, an advanced core
-                facility and research centre hosted jointly by University of Turku and Åbo Akademi
-                University. My main task at the centre is to coordinate the production and publication
-                of all multimedia elements to promote and support bioscience research and educational
-                activities at the two universities. I have large body of experience in producing
-                photographs, videos, illustrations, presentations, print and web documents. Since the
-                start of my employment in March 2017, I have gained significant practical knowledge. I
-                am well versed in audiovisual media design, conceptualisation and implementation. I am
-                a competent user of Adobe Creative Cloud software package.
+              I am an experienced multimedia producer at the Turku Bioscience Centre, a leading core facility and research hub jointly hosted by the University of Turku and Åbo Akademi University. In my role, I oversee the production and dissemination of multimedia content to effectively communicate and support bioscience research and educational initiatives across both universities. I possess extensive experience in creating photographs, videos, illustrations, presentations, and both print and digital materials. Since joining the centre in March 2017, I have developed strong practical expertise in audiovisual media design, from conceptualization to execution, and I am highly proficient in the Adobe Creative Cloud suite.
               </p>
             </div>
           </article>
