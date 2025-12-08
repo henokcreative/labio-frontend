@@ -24,23 +24,7 @@ const AboutPage = () => {
                 title="About Labio Creative Studio"
                 subtitle="Digital Print • Photography • Videography • Web Development"
             />
-            {/* Mission Section */}
-            <section className="about-mission">
-                <h2>Our Mission</h2>
-                <p>
-                    Labio empowers scientists and creatives with the knowledge and tools
-                    they need to succeed in the business of science and design.
-                </p>
-            </section>
-            {/* Services Section */}
-            <section className="services">
-                <h2>Our Services</h2>
-                <p>
-                    We provide digital print, photography, videography, and web
-                    development services for small businesses. Our goal is to help you
-                    create visually stunning and interactive digital experiences.
-                </p>
-            </section>
+
             {/* Services Section */}
             <section className="about-article">
                 <h3>The Unsung Role of Multimedia in Modern Science Communication</h3>
