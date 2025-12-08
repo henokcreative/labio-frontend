@@ -128,7 +128,7 @@ button:hover,
    SECTIONS
 =========================== */
 section {
-    padding: var(--spacing-section) 2rem;
+    padding: var(--spacing-section) 1rem;
 }
 
 /* ===========================
