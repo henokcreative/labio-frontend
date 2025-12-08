@@ -1,7 +1,7 @@
 import React from "react";
 import "./Hero.css";
 
-const Hero = ({ title, subtitle, ctaText, ctaLink }) => {
+const Hero = ({ title, subheading, subtitle, ctaText, ctaLink }) => {
   return (
     <section className="hero">
       <div className="hero-content">
