@@ -87,6 +87,7 @@ p {
     color: var(--color-muted);
     margin-bottom: 1rem;
     text-align: center;
+    max-width: 800px;
 }
 
 /* ===========================
