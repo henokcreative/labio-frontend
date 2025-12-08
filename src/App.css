@@ -88,6 +88,7 @@ p {
     margin-bottom: 1rem;
     text-align: center;
     max-width: 800px !important;
+    margin: inherit auto;
 }
 
 /* ===========================
