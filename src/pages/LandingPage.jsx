@@ -18,11 +18,13 @@ const LandingPage = () => {
     <div className="landing-page">
       {/* Hero Section */}
       <Hero
-        title="Welcome to Labio Creative Studio"
+        title="LaBio Creative Studio"
+        subheading="Research Media Production"
         subtitle="Digital Print • Photography • Videography • Web Development"
         ctaText="View Our Work"
         ctaLink="#projects"
       />
+
             {/* Mission Section */}
             <section className="about-mission">
                 <h2>Our Mission</h2>
