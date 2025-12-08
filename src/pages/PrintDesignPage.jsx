@@ -36,17 +36,23 @@ const PrintDesignPage = () => {
         title="Print & Design Projects"
         subtitle="A showcase of visual materials created for scientific communication and branding."
       />
-
-      <div className="masonry-grid">
-        {photos.map((photo, i) => (
-          <div key={i} className="masonry-item" onClick={() => openLightbox(i)}>
-            <img src={photo.imgUrl} alt={photo.title} />
-            <div className="photo-overlay">
-              <span>{photo.title}</span>
+<section className="print-design-intro">
+        <p>
+          At Labio Creative Studio, we specialize in crafting visually compelling print and design materials tailored for the scientific community. Our portfolio showcases a diverse range of projects, including posters, brochures, and digital graphics, all designed to effectively communicate complex scientific concepts with clarity and creativity. Explore our collection to see how we bring scientific ideas to life through innovative design.
+        </p>
+      </section>
+      <section className="print-preview">
+        <div className="masonry-grid">
+          {photos.map((photo, i) => (
+            <div key={i} className="masonry-item" onClick={() => openLightbox(i)}>
+              <img src={photo.imgUrl} alt={photo.title} />
+              <div className="photo-overlay">
+                <span>{photo.title}</span>
+              </div>
             </div>
-          </div>
-        ))}
-      </div>
+          ))}
+        </div>
+      </section>
 
       <Lightbox
         open={open}

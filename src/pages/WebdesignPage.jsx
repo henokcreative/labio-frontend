@@ -59,7 +59,17 @@ const WebdesignPage = () => {
           digital solutions to showcase your brand and engage your audience."
    
       />
-
+<section className="about-mission">
+                <h2>Our Approach</h2>
+                <p>
+                    At Labio, we believe that a website is more than just an online
+                    presence; it's a powerful tool to connect with your audience and
+                    achieve your business goals. Our team of skilled designers and
+                    developers work closely with you to understand your vision and
+                    create a website that reflects your brand identity.
+                </p>
+            </section>
+            
       {/* Projects Section */}
       <section className="gallery" id="projects">
         <h2>Selected Projects</h2>

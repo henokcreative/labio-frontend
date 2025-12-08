@@ -35,17 +35,23 @@ const PhotosPage = () => {
         title="Photography Services"
         subtitle=" High-quality images captured professionally."
       />
-   
-      <div className="masonry-grid">
-        {photos.map((photo, i) => (
-          <div key={i} className="masonry-item" onClick={() => openLightbox(i)}>
-            <img src={photo.imgUrl} alt={photo.title} />
-            <div className="photo-overlay">
-              <span>{photo.title}</span>
+   <section className="photo-intro">
+        <p>
+          At Labio Creative Studio, we specialize in capturing high-quality images that tell a story. Our photography services are tailored to meet the unique needs of our clients, whether it's for scientific documentation, marketing materials, or personal projects. Explore our portfolio to see the diverse range of subjects and styles we offer, all delivered with professionalism and creativity.
+        </p>
+      </section>
+      <section className="photos-preview">
+        <div className="masonry-grid">
+          {photos.map((photo, i) => (
+            <div key={i} className="masonry-item" onClick={() => openLightbox(i)}>
+              <img src={photo.imgUrl} alt={photo.title} />
+              <div className="photo-overlay">
+                <span>{photo.title}</span>
+              </div>
             </div>
-          </div>
-        ))}
-      </div>
+          ))}
+        </div>
+      </section>
 
       <Lightbox
         open={open}
