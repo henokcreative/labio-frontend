@@ -1,3 +1,33 @@
+:root {
+    /* Colors */
+    --color-primary: #df4646;
+    --color-primary-dark: #b73636;
+    --color-bg: #ffffff;
+    --color-text: #222222;
+    --color-muted: #666666;
+    --color-light: #f7f7f7;
+
+    /* Font Sizes */
+    --fs-h1: clamp(2rem, 1.6rem + 3.2vw, 3rem);
+    --fs-h2: clamp(1.6rem, 1.2rem + 2.4vw, 2.4rem);
+    --fs-h3: clamp(1.2rem, 1rem + 1.6vw, 1.8rem);
+    --fs-h4: clamp(1rem, 0.9rem + 1vw, 1.4rem);
+    --fs-body: clamp(0.9rem, 0.8rem + 0.4vw, 1rem);
+
+    /* Spacing */
+    --spacing-section: 2rem;
+    --spacing-card: 1.5rem;
+
+    /* Radius */
+    --radius: 12px;
+
+    /* Shadows */
+    --shadow-soft: 0 4px 10px rgba(0, 0, 0, 0.08);
+    --shadow-medium: 0 6px 20px rgba(0, 0, 0, 0.12);
+
+    /* Transitions */
+    --transition: 0.3s ease;
+}
 /* ========== GLOBAL TYPOGRAPHY ========== */
 
 /* Base settings */
@@ -12,18 +42,26 @@ body {
 }
 
 #root {
-      background-color: #fafafa !important;
-        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  background-color: #fafafa !important;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 
 
 }
 
 /* Headings */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: "Poppins", sans-serif;
   color: #111;
-  margin: 1rem 0 0.5rem 0;
+  margin: 1rem auto;
   line-height: 1.2;
+  text-align: center !important;
+  max-width: 80vw !important;
+
 }
 
 h1 {
@@ -60,24 +98,28 @@ h6 {
 p {
   font-size: 1rem;
   color: #444;
-  margin: 0.5rem 0 1rem 0;
+  margin: 1rem auto;
   line-height: 1.6;
+  text-align: center;
+  max-width: 800px !important;
 }
 
 /* Links */
 a {
-  color: #e63946;
-  text-decoration: none;
-  transition: color 0.3s ease;
+    color: var(--color-primary);
+    text-decoration: none;
+    transition: var(--transition);
 }
 
 a:hover {
-  color: #d62828;
-  text-decoration: underline;
+    color: var(--color-text);
+    text-decoration: none !important;
+
 }
 
 /* Lists */
-ul, ol {
+ul,
+ol {
   margin: 0.5rem 0 1rem 1.5rem;
   padding: 0;
 }
@@ -87,11 +129,13 @@ li {
 }
 
 /* Inline text styles */
-strong, b {
+strong,
+b {
   font-weight: 600;
 }
 
-em, i {
+em,
+i {
   font-style: italic;
 }
 
@@ -125,61 +169,77 @@ pre {
   overflow-x: auto;
 }
 
+/* ===========================
+   LINKS & BUTTONS
+=========================== */
+
+
+button,
+.btn {
+    padding: 0.75rem 1.5rem;
+    background: var(--color-primary);
+    color: white;
+    border: none;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-soft);
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+button:hover,
+.btn:hover {
+    background: var(--color-primary-dark);
+    box-shadow: var(--shadow-medium);
+}
+
 /* Responsive text scaling */
 @media (max-width: 768px) {
-  h1 { font-size: 2rem; }
-  h2 { font-size: 1.75rem; }
-  h3 { font-size: 1.5rem; }
-  h4 { font-size: 1.25rem; }
-  p  { font-size: 0.95rem; }
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.75rem;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+  }
+
+  h4 {
+    font-size: 1.25rem;
+  }
+
+  p {
+    font-size: 0.95rem;
+  }
 }
 
 @media (max-width: 480px) {
-  h1 { font-size: 1.75rem; }
-  h2 { font-size: 1.5rem; }
-  h3 { font-size: 1.25rem; }
-  p  { font-size: 0.9rem; }
+  h1 {
+    font-size: 1.75rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  h3 {
+    font-size: 1.25rem;
+  }
+
+  p {
+    font-size: 0.9rem;
+  }
 }
 
 
-/* ===== Gallery Section ===== */
-.gallery {
-  padding: 60px 20px;
-  text-align: center;
-}
-
-.gallery h2 {
-  font-size: 2rem;
-  margin-bottom: 40px;
-  color: #222;
-}
-
-/* Use flexbox for clean layout */
-.gallery-flex {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1.5rem;
-  /* padding: 0 2rem; */
-}
-
-/* Individual project cards */
-.gallery-item {
-  flex: 1 1 280px;
-  max-width: 350px;
-  background-color: white;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s;
-  min-height: 300px !important;
-}
 
 
-  /* 1 per row on mobile */
+/* 1 per row on mobile */
 @media (max-width: 576px) {
 
- .gallery-item {
+  .gallery-item {
     flex: 1 1 45%;
     max-width: 45%;
   }

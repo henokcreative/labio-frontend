@@ -5,18 +5,21 @@
   cursor: pointer;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   height: 100% !important;
+  padding: 0.5rem !important;
 }
 
 .projects-card img {
   width: 100%;
-  height: 100%;
+  height: 400px;
   display: block;
   transition: transform 0.3s ease;
   object-fit: cover;
+  border-radius: 1rem;
+
 }
 
 .projects-card:hover img {
-  transform: scale(1.05);
+  transform: scale(1.15);
 }
 .projects-card:hover h3 {
   transform: scale(1.1);
