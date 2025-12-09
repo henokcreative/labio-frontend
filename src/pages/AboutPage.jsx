@@ -7,10 +7,7 @@ import "./LandingPage.css";
 import ProjectCard from "../components/projectsCards";
 
 const AboutPage = () => {
-    const team = [
-        { name: "Henok", role: "Founder & Creative Director", imgUrl: "assets/team/henok.jpg" },
-        // { name: "Jane Doe", role: "Lead Scientist", imgUrl: "/team/jane.jpg" },
-    ];
+
     const projects = [
         { title: "Photography", imgUrl: "assets/projects/project1.jpg", link: "/photos" },
         { title: "Web Design", imgUrl: "assets/projects/project2.jpg", link: "/web-design" },
