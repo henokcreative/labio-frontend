@@ -27,7 +27,7 @@ const AboutPage = () => {
 
             {/* Services Section */}
             <section className="about-article">
-                <h3>The Unsung Role of Multimedia in Modern Science Communication</h3>
+                <h2>The Unsung Role of Multimedia in Modern Science Communication</h2>
                 <p>
                     Science has always been about discovery — but discovery alone isn’t enough. In a world saturated with information, even the most groundbreaking research risks being overlooked if it isn’t communicated clearly and compellingly. This is where multimedia steps in, quietly transforming how science is seen, understood, and shared.
                     As research becomes increasingly interdisciplinary and global, visuals play a critical role in connecting people to complex ideas. A well-designed figure can make data more intuitive. A short video can reveal the human story behind a study. A well-structured webpage can turn dense research outputs into accessible narratives for policymakers, funders, and the public.
