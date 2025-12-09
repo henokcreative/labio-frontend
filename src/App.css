@@ -98,14 +98,14 @@ section {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 1.5rem;
+  gap: 1rem;
   /* padding: 0 2rem; */
 }
 
 /* Individual project cards */
 .gallery-item {
   flex: 1 1 50vw;
-  max-width: 250px;
+  max-width: 300px;
   background-color: white;
   border-radius: 12px;
   overflow: hidden;
