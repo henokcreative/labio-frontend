@@ -14,8 +14,8 @@
   display: block;
   transition: transform 0.3s ease;
   object-fit: cover;
+  object-position: top;
   border-radius: 1rem;
-
 }
 
 .projects-card:hover img {

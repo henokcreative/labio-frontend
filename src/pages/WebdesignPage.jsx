@@ -11,16 +11,16 @@ const WebdesignPage = () => {
 
   const projects = [
     {
-      title: "Nordic Metabolomics Society",
-      subtitle: "Brand identity, webpage design and development",
-      imgUrl: "assets/webdesignDev/thumb-nordmet.png",
-      link: "https://nordmet.org",
-    },
-    {
       title: "Turku Bioscience Centre",
       subtitle: "Webpage design and development",
       imgUrl: "assets/webdesignDev/thumb-bioscience.png",
       link: "https://bioscience.fi",
+    },
+    {
+      title: "Nordic Metabolomics Society",
+      subtitle: "Brand identity, webpage design and development",
+      imgUrl: "assets/webdesignDev/thumb-nordmet.png",
+      link: "https://nordmet.org",
     },
     {
       title: "Turku PET Centre",
@@ -39,6 +39,13 @@ const WebdesignPage = () => {
       subtitle: "Brand identity, webpage design and development",
       imgUrl: "assets/webdesignDev/thumb-bc.JPG",
       link: "https://biocityturku.fi",
+    },
+    {
+      title: "BarrierForce Centre of Excellence",
+      subtitle: "Brand identity, webpage design and development",
+      imgUrl: "assets/webdesignDev/thumb-barrierforce.png",
+      link: "https://barrierforce.utu.fi/",
+      
     },
     {
       title: "Multiepigen",
