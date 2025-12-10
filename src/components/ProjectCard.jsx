@@ -10,7 +10,7 @@ const ProjectCard = ({ title, subtitle, imgUrl, link }) => {
         <h3>{title}</h3>
         {subtitle && <p>{subtitle}</p>}
         {link && (
-          <a href={link} target="_self" rel="noopener noreferrer">
+          <a href={link} target="_blank" rel="noopener noreferrer" className="button btn" >
             View Project
           </a>
         )}
