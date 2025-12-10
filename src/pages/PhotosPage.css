@@ -1,0 +1,11 @@
+.photos-page .hero {
+    background-image: none !important;
+}
+
+/* ========== PHOTOS PAGE STYLING ========== */
+
+
+.photo-overlay{
+    text-align: center !important;
+    padding: 0.5rem 1rem;
+}

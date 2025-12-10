@@ -4,6 +4,7 @@ import Lightbox from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css";
 import "./ProjectsGrid.css";
 import Hero from "../components/Hero";
+import "./PhotosPage.css";
 
 const PhotosPage = () => {
   const photos = [
@@ -30,12 +31,12 @@ const PhotosPage = () => {
 
   return (
     <div className="photos-page">
-              {/* Hero Section */}
+      {/* Hero Section */}
       <Hero
         title="Photography Services"
         subtitle=" High-quality images captured professionally."
       />
-   <section className="photo-intro">
+      <section className="photo-intro">
         <p>
           At Labio Creative Studio, we specialize in capturing high-quality images that tell a story. Our photography services are tailored to meet the unique needs of our clients, whether it's for scientific documentation, marketing materials, or personal projects. Explore our portfolio to see the diverse range of subjects and styles we offer, all delivered with professionalism and creativity.
         </p>
