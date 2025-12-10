@@ -9,7 +9,6 @@ const Footer = () => {
 
 
         <Link
-          to="/"
           className="footer-logo"
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
         >
