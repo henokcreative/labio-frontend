@@ -35,6 +35,12 @@ const WebdesignPage = () => {
       link: "https://inflames.utu.fi",
     },
     {
+      title: "Ivaska Lab",
+      subtitle: "Webpage design and development",
+      imgUrl: "assets/webdesignDev/thumb-ivaskalab.png",
+      link: "https://ivaskalab.utu.fi",
+    },
+    {
       title: "BioCity Turku",
       subtitle: "Brand identity, webpage design and development",
       imgUrl: "assets/webdesignDev/thumb-bc.JPG",
