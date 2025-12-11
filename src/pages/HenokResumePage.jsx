@@ -21,12 +21,7 @@ const resumePage = () => {
               henok.karvonen@gmail.com
             </a>
           </div>
-          <div className="contact-item">
-            Website :{" "}
-            <a href="https://henokcreative.github.io/" target="_blank" rel="noopener noreferrer">
-              henokcreative.github.io
-            </a>
-          </div>
+
           <div className="contact-item">Mobile : +358 45 6955689</div>
         </div>
         <div className="clear" />
