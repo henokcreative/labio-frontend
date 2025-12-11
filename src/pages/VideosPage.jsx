@@ -5,10 +5,11 @@ import Hero from "../components/Hero";
 
 const VideosPage = () => {
   const videos = [
-    { title: "Lab Workflow", link: "https://www.youtube.com/embed/5gzypYXfEos" },
-    { title: "Product Demo", link: "https://www.youtube.com/embed/UNAYz3hqAnc" },
-    { title: "Interview with Scientist", link: "https://www.youtube.com/embed/2gYRmaCT08U" },
-    { title: "Lab Tour", link: "https://www.youtube.com/embed/AcUTazKaNb8" },
+    { title: "Corporate Corner", link: "https://www.youtube.com/embed/5gzypYXfEos" },
+    { title: "EuroBioimaging-ERIC Finnish Node", link: "https://www.youtube.com/embed/UNAYz3hqAnc" },
+    { title: "Abo Akademi University - Cell Biology ", link: "https://www.youtube.com/embed/2gYRmaCT08U" },
+    { title: "Turku Bioscience Centre", link: "https://www.youtube.com/embed/AcUTazKaNb8" },
+    { title: "Software promotion", link: "https://www.youtube.com/embed/pVEj_4S96hk?si=JSYf7unCdgM3BHjC" },
   ];
 
   return (
