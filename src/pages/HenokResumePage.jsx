@@ -2,24 +2,18 @@
 import React from "react";
 import Hero from "../components/Hero";
 import "./resume.css";
-
-
-
 const resumePage = () => {
-
-
   return (
     <div id="cv" className="instaFade resume-page">
       <div className="mainDetails">
+        <div id="name">
+                 <h3>Multimedia Producer</h3>
+          <h4>Henok Karvonen</h4>
+   
+        </div>
         <div className="resume-headshot">
           <img src="assets/team/hk.jpg" alt="Henok Karvonen" />
         </div>
-
-        <div id="name">
-          <h4>Henok Karvonen</h4>
-          <h3>Multimedia Producer</h3>
-        </div>
-
         <div id="contactDetails">
           <div className="contact-item">
             E-mail :{" "}
@@ -37,28 +31,24 @@ const resumePage = () => {
         </div>
         <div className="clear" />
       </div>
-
       <div id="mainArea">
         <section>
           <article>
             <div className="sectionTitle">
               <h1>About Me</h1>
             </div>
-
             <div className="sectionContent">
               <p>
-              I am an experienced multimedia producer at the Turku Bioscience Centre, a leading core facility and research hub jointly hosted by the University of Turku and Åbo Akademi University. In my role, I oversee the production and dissemination of multimedia content to effectively communicate and support bioscience research and educational initiatives across both universities. I possess extensive experience in creating photographs, videos, illustrations, presentations, and both print and digital materials. Since joining the centre in March 2017, I have developed strong practical expertise in audiovisual media design, from conceptualization to execution, and I am highly proficient in the Adobe Creative Cloud suite.
+                I am an experienced multimedia producer at the Turku Bioscience Centre, a leading core facility and research hub jointly hosted by the University of Turku and Åbo Akademi University. In my role, I oversee the production and dissemination of multimedia content to effectively communicate and support bioscience research and educational initiatives across both universities. I possess extensive experience in creating photographs, videos, illustrations, presentations, and both print and digital materials. Since joining the centre in March 2017, I have developed strong practical expertise in audiovisual media design, from conceptualization to execution, and I am highly proficient in the Adobe Creative Cloud suite.
               </p>
             </div>
           </article>
           <div className="clear" />
         </section>
-
         <section>
           <div className="sectionTitle">
             <h1>Work Experience</h1>
           </div>
-
           <div className="sectionContent">
             <article>
               <h4>Multimedia producer, University of Turku, Finland</h4>
@@ -70,7 +60,6 @@ const resumePage = () => {
                 time employees and interns
               </p>
             </article>
-
             <article>
               <h4>Master’s thesis project researcher, University of Turku, Finland</h4>
               <p className="subDetails">September 2014 - January 2017</p>
@@ -79,7 +68,6 @@ const resumePage = () => {
                 cells
               </p>
             </article>
-
             <article>
               <h4>Primary school teacher, Addis Ababa, Ethiopia</h4>
               <p className="subDetails">September 2003 - June 2011</p>
@@ -88,25 +76,21 @@ const resumePage = () => {
           </div>
           <div className="clear" />
         </section>
-
         <section>
           <div className="sectionTitle">
             <h1>Education</h1>
           </div>
-
           <div className="sectionContent">
             <article>
               <h4>University of Turku</h4>
               <p className="subDetails">September 2013 - July 2015</p>
               <p>Master of science in biomedical imaging, 3/5, cum laude approbatur</p>
             </article>
-
             <article>
               <h4>Addis Ababa University</h4>
               <p className="subDetails">September 2007 - July 2011</p>
               <p>Bachelor of education in biology, cumulative GPA 3.17/4.00, distinction</p>
             </article>
-
             <article>
               <h4>Kotebe Metropolitan University</h4>
               <p className="subDetails">September 2001 - August 2003</p>
@@ -119,5 +103,4 @@ const resumePage = () => {
     </div>
   );
 };
-
 export default resumePage;

@@ -8,11 +8,10 @@ import PhotosPage from "./pages/PhotosPage";
 import WebdesignPage from "./pages/WebdesignPage";
 import VideosPage from "./pages/VideosPage";
 import PrintDesignPage from "./pages/PrintDesignPage";
-import ResumePage from "./pages/ResumePage";
+import HenokResumePage from "./pages/HenokResumePage";
 import Footer from "./components/Footer";
 import "./AppTypography.css";
-
-
+// import 'bootstrap/dist/css/bootstrap.min.css';
 import "./App.css";
 
 function App() {
@@ -20,7 +19,6 @@ function App() {
     <Router>
       <div className="App">
         <Navbar /> {/* use your new Navbar component */}
-
         <Routes>
           <Route path="/" element={<LandingPage />} />
           <Route path="/about" element={<AboutPage />} />
@@ -29,12 +27,11 @@ function App() {
           <Route path="/web-design" element={<WebdesignPage />} />
           <Route path="/videos" element={<VideosPage />} />
           <Route path="/print-design" element={<PrintDesignPage />} />
-           <Route path="/resume" element={<ResumePage/>} />
+           <Route path="/henok-resume" element={<HenokResumePage/>} />
         </Routes>
         <Footer /> {/* consistent footer across all pages */}
       </div>
     </Router>
   );
 }
-
 export default App;
