@@ -1,3 +1,71 @@
+/* -------------------------------
+   Custom Self-Hosted Fonts
+--------------------------------*/
+@font-face {
+  font-family: "Montserrat";
+  src: url("./fonts/Montserrat/Montserrat-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("./fonts/Montserrat/Montserrat-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("./fonts/Montserrat/Montserrat-SemiBold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Optional Italic */
+@font-face {
+  font-family: "Montserrat";
+  src: url("./fonts/Montserrat/Montserrat-Italic.woff2") format("woff2");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("./fonts/Poppins/Poppins-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("./fonts/Poppins/Poppins-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("./fonts/Poppins/Poppins-SemiBold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Optional Italic */
+@font-face {
+  font-family: "Poppins";
+  src: url("./fonts/Poppins/Poppins-Italic.woff2") format("woff2");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
 :root {
     /* Colors */
     --color-primary: #df4646;
@@ -27,12 +95,17 @@
 
     /* Transitions */
     --transition: 0.3s ease;
+
+    /*font families */
+      --font-heading: "Montserrat", sans-serif;
+        --font-body: "Montserrat", sans-serif;
+
 }
 /* ========== GLOBAL TYPOGRAPHY ========== */
 
 /* Base settings */
 body {
-  font-family: "Poppins", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: var(--font-body);
   color: #222;
   line-height: 1.6;
   margin: 0 auto;
@@ -55,12 +128,13 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Poppins", sans-serif;
+  font-family: var(--font-heading);
   color: #111;
   margin: 2rem auto 1rem;
   line-height: 1.2;
   text-align: center !important;
   max-width: 600px !important;
+  text-transform: uppercase;
 
 }
 
