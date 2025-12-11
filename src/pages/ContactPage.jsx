@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 
 const ContactPage = () => {
   const team = [
-    { name: "Henok", role: "Founder & Creative Director", imgUrl: "assets/team/henok.jpg", link: "/resume" },
+    { name: "Henok", role: "Founder & Creative Director", imgUrl: "assets/team/hk.jpg", link: "/resume" },
     //{ name: "Jane Doe", role: "Lead Scientist", imgUrl: "/team/jane.jpg" },
   ];
   return (

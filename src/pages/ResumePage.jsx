@@ -12,7 +12,7 @@ const resumePage = () => {
     <div id="cv" className="instaFade resume-page">
       <div className="mainDetails">
         <div className="resume-headshot">
-          <img src="assets/team/henok.jpg" alt="Henok Karvonen" />
+          <img src="assets/team/hk.jpg" alt="Henok Karvonen" />
         </div>
 
         <div id="name">

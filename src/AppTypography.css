@@ -129,7 +129,7 @@ h4,
 h5,
 h6 {
   font-family: var(--font-heading);
-  color: #111;
+  color: var(--color-primary);
   margin: 2rem auto 1rem;
   line-height: 1.2;
   text-align: center !important;
