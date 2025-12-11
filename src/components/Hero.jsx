@@ -9,7 +9,7 @@ const Hero = ({ title, subheading, subtitle, ctaText, ctaLink }) => {
         <h4>{subheading}</h4>
         <p>{subtitle}</p>
         {ctaText && ctaLink && (
-          <a href={ctaLink} className="hero-btn">{ctaText}</a>
+          <a href={ctaLink} className="btn button">{ctaText}</a>
         )}
       </div>
     </section>
