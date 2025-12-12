@@ -51,7 +51,17 @@ body {
 html {
   scroll-behavior: smooth;
 }
+textarea {
+  resize: vertical;
+  min-height: 100px;
+  font-family: var(--font-body);
+  font-size: var(--fs-body);
+}
+input {
+  font-family: var(--font-body);
+    font-size: var(--fs-body);
 
+}
 .bg-light {
     background-color: var(--bg-light) !important;
     background-attachment: fixed;

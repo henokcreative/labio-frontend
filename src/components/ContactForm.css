@@ -19,3 +19,8 @@
   color: green;
   margin-bottom: 15px;
 }
+textarea {
+  resize: vertical;
+  min-height: 100px;
+  font-family: var(--font-body);
+}
