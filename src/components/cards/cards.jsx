@@ -1,18 +1,21 @@
-// src/components/ProjectsCards.jsx
+
 import React from "react";
-import "./ProjectsCards.css";
+import { Link } from "react-router-dom";
+import "./cards.css";
 
 const ProjectsCards = ({ title, subtitle, imgUrl, link }) => {
   return (
     <div className="projects-card">
       <img src={imgUrl} alt={title} />
+
       <div className="projects-info">
         <h3>{title}</h3>
         {subtitle && <p>{subtitle}</p>}
+
         {link && (
-          <a href={link} target="_self" rel="noopener noreferrer">
-            View Projects
-          </a>
+          <Link to={link} className="view-projects-link">
+            View Projects →
+          </Link>
         )}
       </div>
     </div>

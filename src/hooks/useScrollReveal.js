@@ -1,35 +1,26 @@
+// src/hooks/useScrollReveal.js
 import { useEffect, useRef } from "react";
 
-const useScrollReveal = (options = {}) => {
+const useScrollReveal = () => {
   const ref = useRef(null);
 
   useEffect(() => {
-    const element = ref.current;
+    const el = ref.current;
 
-    if (!element) return;
-
-    // Default animation settings
-    const observerOptions = {
-      threshold: 0.2, // 20% visible triggers animation
-      ...options,
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        // When element becomes visible
+    const observer = new IntersectionObserver(
+      ([entry]) => {
         if (entry.isIntersecting) {
-          element.classList.add("reveal-active");
+          el.classList.add("visible");
         } else {
-          // Allow re-trigger on scroll UP or DOWN
-          element.classList.remove("reveal-active");
+          el.classList.remove("visible");
         }
-      });
-    }, observerOptions);
+      },
+      { threshold: 0.2 }
+    );
 
-    observer.observe(element);
-
+    observer.observe(el);
     return () => observer.disconnect();
-  }, [options]);
+  }, []);
 
   return ref;
 };

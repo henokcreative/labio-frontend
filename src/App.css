@@ -218,16 +218,13 @@ section {
 /*reveal animation*/
 .reveal {
   opacity: 0;
-  transform: translateY(40px) scale(0.98);
-  transition: 
-    opacity 0.75s ease-out,
-    transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
-  will-change: opacity, transform;
+  transform: translateY(40px);
+  transition: all 0.7s cubic-bezier(.17,.67,.83,.67);
 }
 
-.reveal-active {
+.reveal.visible {
   opacity: 1;
-  transform: translateY(0) scale(1);
+  transform: translateY(0);
 }
 
 /* ===========================

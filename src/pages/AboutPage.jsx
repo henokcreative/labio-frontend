@@ -3,28 +3,26 @@ import React from "react";
 import "./AboutPage.css";
 import Hero from "../components/Hero";
 import { Link } from "react-router-dom";
-import "./LandingPage.css";
-// import ProjectsCards from "../components/ProjectsCards";
+import ProjectsCards from "../components/cards/cards"; 
 
 const AboutPage = () => {
+  // Correct array name
+  const projects = [
+    { title: "Photography", imgUrl: "assets/projects/project1.jpg", link: "/photos" },
+    { title: "Web Design", imgUrl: "assets/projects/project2.jpg", link: "/web-design" },
+    { title: "Videography", imgUrl: "assets/projects/project3.jpg", link: "/videos" },
+    { title: "Print Design", imgUrl: "assets/projects/project4.png", link: "/print-design" },
+  ];
 
-    // const projects = [
-    //     { title: "Photography", imgUrl: "assets/projects/project1.jpg", link: "/photos" },
-    //     { title: "Web Design", imgUrl: "assets/projects/project2.jpg", link: "/web-design" },
-    //     { title: "Videography", imgUrl: "assets/projects/project3.jpg", link: "/videos" },
-    //     { title: "Print Design", imgUrl: "assets/projects/project4.png", link: "/print-design" },
-    // ];
-    return (
-        <div className="about-page">
-            {/* Hero Section */}
-            <Hero
-                title="About Labio Creative Studio"
-                subtitle="Digital Print • Photography • Videography • Web Development"
-            />
+  return (
+    <div className="about-page">
+      <Hero
+        title="About Labio Creative Studio"
+        subtitle="Digital Print • Photography • Videography • Web Development"
+      />
 
-            {/* Services Section */}
-            <section className="about-article">
-                <h2>The Unsung Role of Multimedia in Modern Science Communication</h2>
+      <section className="about-article">
+                <h1>The Unsung Role of Multimedia in Modern Science Communication</h1>
                 <p>
                     Science has always been about discovery — but discovery alone isn’t enough. In a world saturated with information, even the most groundbreaking research risks being overlooked if it isn’t communicated clearly and compellingly. This is where multimedia steps in, quietly transforming how science is seen, understood, and shared.
                     As research becomes increasingly interdisciplinary and global, visuals play a critical role in connecting people to complex ideas. A well-designed figure can make data more intuitive. A short video can reveal the human story behind a study. A well-structured webpage can turn dense research outputs into accessible narratives for policymakers, funders, and the public.
@@ -34,23 +32,26 @@ const AboutPage = () => {
                     Behind every image, animation, or presentation lies a blend of scientific literacy and creative storytelling. My own work sits at that intersection: producing videos, posters, presentations, web pages, and photographs that help scientists communicate their discoveries with impact. It’s about bridging two worlds — the precision of science and the emotion of visual narrative.
                     Ultimately, the goal is not just to make science look good, but to make it understood. Because when research is seen and appreciated by wider audiences, it has a greater chance to inspire action, foster collaboration, and drive innovation.
                 </p>
-            </section>
-            {/* Featured Projects Section */}
-            {/* <section className="gallery" id="projects">
-                <h2>Featured Projects</h2>
-                <div className="gallery-flex">
-                    {projects.map((project, idx) => (
-                        <Link key={idx} to={project.link} className="gallery-item">
-                            <ProjectsCards
-                                title={project.title}
-                                imgUrl={project.imgUrl}
-                                link={project.link}
-                            />
-                        </Link>
-                    ))}
-                </div>
-            </section> */}
+      </section>
+
+      {/* Featured Projects Section */}
+      <section className="gallery" id="projects">
+        <h2>Featured Projects</h2>
+
+        <div className="gallery-flex">
+          {projects.map((project, idx) => (
+            <Link key={idx} to={project.link} className="gallery-item">
+              <ProjectsCards
+                title={project.title}
+                imgUrl={project.imgUrl}
+                link={project.link}
+              />
+            </Link>
+          ))}
         </div>
-    );
+      </section>
+    </div>
+  );
 };
+
 export default AboutPage;
