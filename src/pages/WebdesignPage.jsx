@@ -20,7 +20,7 @@ const WebdesignPage = () => {
       title: "Nordic Metabolomics Society",
       subtitle: "Brand identity, webpage design and development",
       imgUrl: "assets/webdesignDev/thumb-nordmet.png",
-      link: "https://nordmet.org",
+      link: "https://nordmetsoc.org",
     },
     {
       title: "Turku PET Centre",
