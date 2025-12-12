@@ -30,6 +30,10 @@
 
     /* Transitions */
     --transition: 0.3s ease;
+
+    /*backgrounds*/
+    --bg-light: #f6eded;
+    --bg-dark: #222222; 
 }
 
 /* ===========================
@@ -48,6 +52,10 @@ html {
   scroll-behavior: smooth;
 }
 
+.bg-light {
+    background-color: var(--bg-light) !important;
+    background-attachment: fixed;
+}
 /* ===========================
    SECTIONS
 =========================== */
