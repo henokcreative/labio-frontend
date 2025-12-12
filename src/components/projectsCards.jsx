@@ -1,8 +1,8 @@
-// src/components/projectsCards.jsx
+// src/components/ProjectsCards.jsx
 import React from "react";
 import "./ProjectsCards.css";
 
-const projectsCards = ({ title, subtitle, imgUrl, link }) => {
+const ProjectsCards = ({ title, subtitle, imgUrl, link }) => {
   return (
     <div className="projects-card">
       <img src={imgUrl} alt={title} />
@@ -19,4 +19,4 @@ const projectsCards = ({ title, subtitle, imgUrl, link }) => {
   );
 };
 
-export default projectsCards;
+export default ProjectsCards;
