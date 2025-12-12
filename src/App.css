@@ -214,3 +214,22 @@ section {
 .project-alt-row.animate-on-scroll.show {
     transform: translateX(0);
 }
+
+/*reveal animation*/
+.reveal {
+  opacity: 0;
+  transform: translateY(40px) scale(0.98);
+  transition: 
+    opacity 0.75s ease-out,
+    transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal-active {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+/* ===========================
+   END OF FILE
+=========================== */

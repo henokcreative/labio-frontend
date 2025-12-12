@@ -3,11 +3,16 @@ import React from "react";
 import Hero from "../components/Hero";
 import "./LandingPage.css";
 import { Link } from "react-router-dom";
-import ProjectCards from "../components/ProjectsCards";
 import useScrollAnimation from "../hooks/useScrollAnimation";
+import useScrollReveal from "../hooks/useScrollReveal";
+
 
 const LandingPage = () => {
   useScrollAnimation();
+  const missionRef = useScrollReveal();
+  const servicesRef = useScrollReveal();
+  const projectRef = useScrollReveal();
+
   // Featured projects
   const projects = [
     { title: "Photography", imgUrl: "assets/projects/project1.jpg", link: "/photos" },
@@ -28,7 +33,7 @@ const LandingPage = () => {
       />
 
       {/* Mission Section */}
-      <section className="about-mission">
+      <section ref={missionRef} className="reveal" >
         <h2>Our Mission</h2>
         <p>
           Labio empowers scientists and creatives with the knowledge and tools
@@ -36,7 +41,7 @@ const LandingPage = () => {
         </p>
       </section>
       {/* Services Section */}
-      <section className="services">
+      <section ref={servicesRef} className="reveal">
         <h2>Our Services</h2>
         <p>
           We provide digital print, photography, videography, and web
@@ -45,7 +50,7 @@ const LandingPage = () => {
         </p>
       </section>
       {/* Featured Projects Section */}
-      <section className="projects-alt-section" id="projects">
+      <section ref={projectRef} className="reveal projects-alt-section" id="projects">
         {/* <h2 className="section-title">Featured Projects</h2> */}
 
         {projects.map((project, idx) => (
