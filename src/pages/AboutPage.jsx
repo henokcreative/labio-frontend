@@ -4,16 +4,16 @@ import "./AboutPage.css";
 import Hero from "../components/Hero";
 import { Link } from "react-router-dom";
 import "./LandingPage.css";
-import ProjectsCards from "../components/ProjectsCards";
+// import ProjectsCards from "../components/ProjectsCards";
 
 const AboutPage = () => {
 
-    const projects = [
-        { title: "Photography", imgUrl: "assets/projects/project1.jpg", link: "/photos" },
-        { title: "Web Design", imgUrl: "assets/projects/project2.jpg", link: "/web-design" },
-        { title: "Videography", imgUrl: "assets/projects/project3.jpg", link: "/videos" },
-        { title: "Print Design", imgUrl: "assets/projects/project4.png", link: "/print-design" },
-    ];
+    // const projects = [
+    //     { title: "Photography", imgUrl: "assets/projects/project1.jpg", link: "/photos" },
+    //     { title: "Web Design", imgUrl: "assets/projects/project2.jpg", link: "/web-design" },
+    //     { title: "Videography", imgUrl: "assets/projects/project3.jpg", link: "/videos" },
+    //     { title: "Print Design", imgUrl: "assets/projects/project4.png", link: "/print-design" },
+    // ];
     return (
         <div className="about-page">
             {/* Hero Section */}
@@ -36,7 +36,7 @@ const AboutPage = () => {
                 </p>
             </section>
             {/* Featured Projects Section */}
-            <section className="gallery" id="projects">
+            {/* <section className="gallery" id="projects">
                 <h2>Featured Projects</h2>
                 <div className="gallery-flex">
                     {projects.map((project, idx) => (
@@ -49,7 +49,7 @@ const AboutPage = () => {
                         </Link>
                     ))}
                 </div>
-            </section>
+            </section> */}
         </div>
     );
 };
