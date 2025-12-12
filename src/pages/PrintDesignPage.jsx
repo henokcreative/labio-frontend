@@ -1,7 +1,7 @@
 // src/pages/PrintDesignPage.jsx
 import React, { useState } from "react";
 import "yet-another-react-lightbox/styles.css";
-import "./ProjectsGrid.css";
+import "../components/MasonryGrid.css";
 import "./PrintDesignPage.css";
 import Hero from "../components/Hero";
 import Lightbox from "yet-another-react-lightbox";

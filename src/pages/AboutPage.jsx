@@ -4,7 +4,7 @@ import "./AboutPage.css";
 import Hero from "../components/Hero";
 import { Link } from "react-router-dom";
 import "./LandingPage.css";
-import ProjectCard from "../components/projectsCards";
+import ProjectCard from "../components/ProjectsCards";
 
 const AboutPage = () => {
 

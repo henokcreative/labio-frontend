@@ -1,17 +1,17 @@
-// src/components/ProjectCard.jsx
+// src/components/WebsiteCard.jsx
 import React from "react";
-import "./ProjectCard.css";
+import "./WebsiteCard.css";
 
-const ProjectCard = ({ title, subtitle, imgUrl, link }) => {
+const WebsiteCard = ({ title, subtitle, imgUrl, link }) => {
   return (
-    <div className="project-card">
+    <div className="website-card">
       <img src={imgUrl} alt={title} />
-      <div className="project-info">
+      <div className="website-info">
         <h3>{title}</h3>
         {subtitle && <p>{subtitle}</p>}
         {link && (
           <a href={link} target="_blank" rel="noopener noreferrer" className="button btn" >
-            View Project
+            Visit Website
           </a>
         )}
       </div>
@@ -19,4 +19,4 @@ const ProjectCard = ({ title, subtitle, imgUrl, link }) => {
   );
 };
 
-export default ProjectCard;
+export default WebsiteCard;

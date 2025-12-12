@@ -1,6 +1,6 @@
 // src/pages/WebdesignPage.jsx
 import React from "react";
-import FrontCards from "../components/projectsCards";
+import FrontCards from "../components/WebsiteCard";
 import "./WebdesignPage.css";
 import { Link } from "react-router-dom";
 import Hero from "../components/Hero";
@@ -51,7 +51,7 @@ const WebdesignPage = () => {
       subtitle: "Brand identity, webpage design and development",
       imgUrl: "assets/webdesignDev/thumb-barrierforce.png",
       link: "https://barrierforce.utu.fi/",
-      
+
     },
     {
       title: "Multiepigen",
@@ -61,7 +61,7 @@ const WebdesignPage = () => {
 
     },
 
-    
+
   ];
 
   return (
@@ -101,6 +101,20 @@ const WebdesignPage = () => {
           ))}
         </div>
       </section>
+      {/* <section className="gallery" id="projects">
+        <h2>Featured Projects</h2>
+        <div className="gallery-flex">
+          {projects.map((project, idx) => (
+            <Link key={idx} to={project.link} className="gallery-item">
+              <ProjectCard
+                title={project.title}
+                imgUrl={project.imgUrl}
+                link={project.link}
+              />
+            </Link>
+          ))}
+        </div>
+      </section> */}
     </div>
   );
 };

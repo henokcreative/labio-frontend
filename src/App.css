@@ -44,7 +44,9 @@
 body {
     max-width: 1400px;
 }
-
+html {
+  scroll-behavior: smooth;
+}
 
 /* ===========================
    SECTIONS
@@ -83,28 +85,132 @@ section {
 =========================== */
 /* ===== Gallery Section ===== */
 .gallery {
-  padding: 60px 20px;
-  text-align: center;
+    padding: 60px 20px;
+    text-align: center;
 }
 
 
 /* Use flexbox for clean layout */
 .gallery-flex {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1rem;
-  /* padding: 0 2rem; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    /* padding: 0 2rem; */
 }
 
 /* Individual project cards */
 .gallery-item {
-  flex: 1 1 50vw;
-  max-width: 300px;
-  background-color: white;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s;
-  min-height: 300px !important;
+    flex: 1 1 50vw;
+    max-width: 300px;
+    background-color: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    min-height: 300px !important;
+}
+
+
+
+
+
+/* Each project row */
+.project-alt-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 80px;
+    gap: 40px;
+}
+
+/* Reverse row for alternating layout */
+.project-alt-row.reverse {
+    flex-direction: row-reverse;
+}
+
+/* Text block */
+.project-alt-text {
+    flex: 1;
+    justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+.project-alt-text p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+
+
+/* Image/card block */
+.project-alt-card {
+    flex: 1;
+    display: block;
+    border-radius: 12px;
+    overflow: hidden;
+    max-height: 350px;
+    width: 350px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+}
+
+.project-alt-card img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 12px;
+    transition: transform 0.3s ease;
+    padding: 1rem;
+    border-radius: 12px !important;
+
+
+}
+
+.project-alt-card img:hover {
+    transform: scale(1.03);
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+
+    .project-alt-row,
+    .project-alt-row.reverse {
+        flex-direction: column;
+    }
+
+    .project-alt-card img {
+        height: 260px;
+    }
+}
+
+
+/* Start hidden */
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s ease-out;
+}
+
+/* When visible */
+.animate-on-scroll.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Optional: slide left or right depending on layout */
+.project-alt-row:not(.reverse).animate-on-scroll {
+    transform: translateX(-60px);
+}
+
+.project-alt-row.reverse.animate-on-scroll {
+    transform: translateX(60px);
+}
+
+.project-alt-row.animate-on-scroll.show {
+    transform: translateX(0);
 }

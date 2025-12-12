@@ -1,7 +1,7 @@
 // src/components/MasonryGrid.jsx
 import React from "react";
 import Masonry from "react-masonry-css";
-import ProjectCard from "./ProjectCard";
+import WebsiteCard from "./WebsiteCard";
 import "./MasonryGrid.css";
 
 const MasonryGrid = ({ items }) => {
@@ -19,7 +19,7 @@ const MasonryGrid = ({ items }) => {
       columnClassName="my-masonry-grid_column"
     >
       {items.map((item, idx) => (
-        <ProjectCard key={idx} {...item} />
+        <WebsiteCard key={idx} {...item} />
       ))}
     </Masonry>
   );

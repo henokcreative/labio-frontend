@@ -3,9 +3,11 @@ import React from "react";
 import Hero from "../components/Hero";
 import "./LandingPage.css";
 import { Link } from "react-router-dom";
-import ProjectCards from "../components/projectsCards";
+import ProjectCards from "../components/ProjectsCards";
+import useScrollAnimation from "../hooks/useScrollAnimation";
 
 const LandingPage = () => {
+  useScrollAnimation();
   // Featured projects
   const projects = [
     { title: "Photography", imgUrl: "assets/projects/project1.jpg", link: "/photos" },
@@ -43,19 +45,32 @@ const LandingPage = () => {
         </p>
       </section>
       {/* Featured Projects Section */}
-      <section className="gallery" id="projects">
-        <h2>Featured Projects</h2>
-        <div className="gallery-flex">
-          {projects.map((project, idx) => (
-            <Link key={idx} to={project.link} className="gallery-item">
-              <ProjectCards
-                title={project.title}
-                imgUrl={project.imgUrl}
-                link={project.link}
-              />
+      <section className="projects-alt-section" id="projects">
+        {/* <h2 className="section-title">Featured Projects</h2> */}
+
+        {projects.map((project, idx) => (
+          <div
+            key={idx}
+            className={`project-alt-row animate-on-scroll ${idx % 2 === 1 ? "reverse" : ""}`}
+          >
+            {/* Text section */}
+            <div className="project-alt-text">
+              <h3>{project.title}</h3>
+              <p>
+                Explore our work in {project.title.toLowerCase()}, where creativity
+                meets clean design and professional execution.
+              </p>
+              <Link to={project.link} className="view-link btn button">
+                View Projects →
+              </Link>
+            </div>
+
+            {/* Card section */}
+            <Link to={project.link} className="project-alt-card">
+              <img src={project.imgUrl} alt={project.title} />
             </Link>
-          ))}
-        </div>
+          </div>
+        ))}
       </section>
     </div>
   );

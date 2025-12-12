@@ -1,6 +1,6 @@
 // src/components/projectsCards.jsx
 import React from "react";
-import "./projectsCards.css";
+import "./ProjectsCards.css";
 
 const projectsCards = ({ title, subtitle, imgUrl, link }) => {
   return (

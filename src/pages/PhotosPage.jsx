@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import MasonryGrid from "../components/MasonryGrid";
 import Lightbox from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css";
-import "./ProjectsGrid.css";
+import "../components/MasonryGrid.css";
 import Hero from "../components/Hero";
 import "./PhotosPage.css";
 

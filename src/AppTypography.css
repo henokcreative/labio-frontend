@@ -258,6 +258,8 @@ button,
     box-shadow: var(--shadow-soft);
     cursor: pointer;
     transition: var(--transition);
+    width: fit-content;
+  margin: 1rem auto;
 }
 
 button:hover,
