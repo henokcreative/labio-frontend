@@ -1,9 +1,9 @@
 import React from "react";
-import ContactForm from "../components/ContactForm";
-import ResumeCard from "../components/ResumeCard";
+// import ContactForm from "../components/ContactForm";
+// import ResumeCard from "../components/ResumeCard";
 import TeamCard from "../components/TeamCard";
 import "./ContactPage.css";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 const ContactPage = () => {
   const team = [
@@ -23,11 +23,11 @@ const ContactPage = () => {
         </div>
       </section>
         {/* contact form Section */}
-      <section className="contact-form-section">
+      {/* <section className="contact-form-section">
         <h2>Contact Us</h2>
         <p>Have questions? Send us a message and we will respond promptly.</p>
         <ContactForm />
-      </section>
+      </section> */}
     </div>
   );
 };

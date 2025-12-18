@@ -31,7 +31,7 @@ const ContactForm = () => {
                 <input type="text" name="name" placeholder="Name" value={formData.name} onChange={handleChange} required />
                 <input type="email" name="email" placeholder="Email" value={formData.email} onChange={handleChange} required />
                 <textarea name="message" placeholder="Your message" value={formData.message} onChange={handleChange} required></textarea>
-                <button type="submit">Send Message</button>
+                <button type="submit" className="btn button">Send Message</button>
             </form>
         </div>
     );
