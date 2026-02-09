@@ -47,13 +47,13 @@
 
 /* Global */
 body {
-  margin: 0;
+  margin: 0 auto;
   background: var(--bg-light);
 }
 
 /* Main layout */
 .app-wrapper {
-  max-width: 1600px;
+  max-width: 2200px;
   margin: auto;
   padding-inline: clamp(1rem, 5vw, 3rem);
 }
