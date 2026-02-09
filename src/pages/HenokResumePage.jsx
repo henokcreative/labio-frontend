@@ -1,15 +1,14 @@
 // src/pages/ResumePage.jsx
 import React from "react";
-import Hero from "../components/Hero";
 import "./resume.css";
 const resumePage = () => {
   return (
     <div id="cv" className="instaFade resume-page">
       <div className="mainDetails">
         <div id="name">
-                 <h3>Multimedia Producer</h3>
+          <h3>Multimedia Producer</h3>
           <h4>Henok Karvonen</h4>
-   
+
         </div>
         <div className="resume-headshot">
           <img src="assets/team/hk.jpg" alt="Henok Karvonen" />
@@ -17,8 +16,8 @@ const resumePage = () => {
         <div id="contactDetails">
           <div className="contact-item">
             E-mail :{" "}
-            <a href="mailto:henok.karvonen@gmail.com" target="_blank" rel="noopener noreferrer">
-              henok.karvonen@gmail.com
+            <a href="mailto:henok.karvonen@utu.fi" target="_blank" rel="noopener noreferrer">
+              henok.karvonen@utu.fi
             </a>
           </div>
 

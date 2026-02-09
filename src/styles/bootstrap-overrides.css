@@ -1,0 +1,19 @@
+:root {
+  --bs-primary: #df4646;     /* Labio purple */
+  --bs-secondary: #0f172a;   /* Dark slate */
+  --bs-success: #22c55e;
+  --bs-danger: #ef4444;
+  --bs-warning: #f59e0b;
+  --bs-info: #38bdf8;
+  --bs-light: #f8fafc;
+  --bs-dark: #020617;
+
+  --bs-body-bg: #ffffff;
+  --bs-body-color: #020617;
+
+  --bs-link-color: #5c2d91;
+  --bs-link-hover-color: #7c3aed;
+
+  --bs-heading-color: #df4646;
+}
+

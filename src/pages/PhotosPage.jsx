@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import MasonryGrid from "../components/MasonryGrid";
 import Lightbox from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css";
 import "../components/MasonryGrid.css";
@@ -14,12 +13,7 @@ const PhotosPage = () => {
     { imgUrl: "/assets/photos/squirrel.jpg", title: "Squirrel" },
     { imgUrl: "/assets/photos/Bumbel_bee.jpg", title: "Bumble Bee" },
     { imgUrl: "/assets/photos/purple_fower.jpg", title: "Purple Flower" },
-    { imgUrl: "/assets/photos/pia_lab.jpg", title: "Pia Lab" },
-    { imgUrl: "/assets/photos/flower1.jpg", title: "Flower 1" },
-    { imgUrl: "/assets/photos/Yellow_flower.jpg", title: "Yellow Flower" },
-    { imgUrl: "/assets/photos/squirrel.jpg", title: "Squirrel" },
-    { imgUrl: "/assets/photos/Bumbel_bee.jpg", title: "Bumble Bee" },
-    { imgUrl: "/assets/photos/purple_fower.jpg", title: "Purple Flower" },
+   
   ];
   const [open, setOpen] = useState(false);
   const [index, setIndex] = useState(0);

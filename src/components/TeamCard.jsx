@@ -1,12 +1,14 @@
 import React from "react";
 import "./TeamCard.css";
 
-const TeamCard = ({ name, role, imgUrl, link }) => {
+const TeamCard = ({ name, role, email, phone, imgUrl, link }) => {
   return (
     <div className="team-card">
       <img src={imgUrl} alt={name} />
       <h3>{name}</h3>
-      <p>{role}</p>
+      <p className="lead">{role}</p>
+      <p>{email}</p>
+      <p>{phone}</p>
       {link && (
         <a className="button btn" href={link} target="_self" rel="noopener noreferrer">
           View CV

@@ -7,15 +7,15 @@ import "./ContactPage.css";
 
 const ContactPage = () => {
   const team = [
-    { name: "Henok", role: "Founder & Creative Director", imgUrl: "assets/team/hk.jpg", link: "/henok-resume" },
+    { name: "Henok Karvonen", role: "Multimedia Producer | Project Specialist", imgUrl: "assets/team/hk.jpg", link: "/henok-resume", phone: "+358 45 6955689", email: "henok.karvonen@utu.fi" },
     //{ name: "Jane Doe", role: "Lead Scientist", imgUrl: "/team/jane.jpg" },
   ];
   return (
     <div className="contact-page">
       {/* Team Section */}
       <section className="team">
-        <h2>Meet the Team</h2>
-        <p>Our creative professionals combine expertise in design, tech, and media.</p>
+        <h2 className="my-4">Contact</h2>
+        {/* <p>Our creative professionals combine expertise in design, tech, and media.</p> */}
         <div className="team-grid">
           {team.map((member, idx) => (
             <TeamCard key={idx} {...member} />

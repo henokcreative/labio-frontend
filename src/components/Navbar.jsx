@@ -10,7 +10,7 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       <Link to="/">
-        <img src="/assets/logo.svg" alt="Labio Logo" className="logo" />
+        <img src="/assets/logo.svg" alt="Labio Logo" className="logo m-2" />
       </Link>
 
       <div className={`nav-links ${isOpen ? "open" : ""}`}>

@@ -1,0 +1,39 @@
+
+.livestream-page .hero {
+    background-image: none !important;
+}
+.livestream-page section {
+  margin: 0 auto;
+}
+
+.livestream-intro {
+  font-size: 1.1rem;
+  max-width: 800px;
+  margin: 3rem auto;
+}
+
+.livestream-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 4rem;
+}
+
+.livestream-steps {
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.8;
+}
+
+.livestream-section.alt {
+  background: #f7f7f7;
+}
+
+.livestream-cta {
+  text-align: center;
+  background: #111;
+  color: #fff;
+}
+
+.livestream-cta .btn {
+  margin-top: 1.5rem;
+}

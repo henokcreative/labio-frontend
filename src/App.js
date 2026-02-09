@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Navbar from "./components/Navbar"; // import new Navbar
+import Navbar from "./components/Navbar"; 
 import LandingPage from "./pages/LandingPage";
 import AboutPage from "./pages/AboutPage";
 import ContactPage from "./pages/ContactPage";
@@ -11,6 +11,8 @@ import PrintDesignPage from "./pages/PrintDesignPage";
 import HenokResumePage from "./pages/HenokResumePage";
 import Footer from "./components/Footer";
 import "./AppTypography.css";
+import LivestreamingPage from "./pages/LivestreamingPage";
+
 // import 'bootstrap/dist/css/bootstrap.min.css';
 import "./App.css";
 
@@ -28,6 +30,7 @@ function App() {
           <Route path="/videos" element={<VideosPage />} />
           <Route path="/print-design" element={<PrintDesignPage />} />
            <Route path="/henok-resume" element={<HenokResumePage/>} />
+           <Route path="/live-stream" element={<LivestreamingPage />} />
         </Routes>
         <Footer /> {/* consistent footer across all pages */}
       </div>

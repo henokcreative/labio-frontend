@@ -1,7 +1,7 @@
 import React from "react";
 import "./Hero.css";
 
-const Hero = ({ title, subheading, subtitle, ctaText, ctaLink }) => {
+const Hero = ({ title, heading, subheading, subtitle, ctaText, ctaLink }) => {
 
   const smoothScroll = (e) => {
     e.preventDefault();
@@ -17,12 +17,13 @@ const Hero = ({ title, subheading, subtitle, ctaText, ctaLink }) => {
   return (
     <section className="hero">
       <div className="hero-content">
-        <h1>{title}</h1>
-        <h4>{subheading}</h4>
-        <p>{subtitle}</p>
+        <h1 className="display-3">{title}</h1>
+        <h5 className="mt-0 mb-4 display-6">{heading}</h5>
+        <p className="lead mt-4">{subheading}</p>
+        <p className="mt-0 fw-bold">{subtitle}</p>
 
         {ctaText && ctaLink && (
-          <a href={ctaLink} onClick={smoothScroll} className="btn button">
+          <a href={ctaLink} onClick={smoothScroll} className="btn btn-primary">
             {ctaText}
           </a>
         )}
