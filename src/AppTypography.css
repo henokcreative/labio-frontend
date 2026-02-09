@@ -114,7 +114,11 @@ body {
   max-width: 2200px;
 }
 
+#root {
+  margin: 0 auto;
 
+
+}
 
 /* Headings */
 h1,
