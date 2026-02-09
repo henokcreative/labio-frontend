@@ -45,8 +45,17 @@
     box-sizing: border-box;
 }
 
+/* Global */
 body {
-    max-width: 1600px;
+  margin: 0;
+  background: var(--bg-light);
+}
+
+/* Main layout */
+.app-wrapper {
+  max-width: 1600px;
+  margin: auto;
+  padding-inline: clamp(1rem, 5vw, 3rem);
 }
 html {
   scroll-behavior: smooth;

@@ -19,7 +19,7 @@ import "./App.css";
 function App() {
   return (
     <Router>
-      <div className="App">
+      <div className="app-wrapper">
         <Navbar /> {/* use your new Navbar component */}
         <Routes>
           <Route path="/" element={<LandingPage />} />
