@@ -6,6 +6,7 @@ import ServicesSection from "../components/landing/ServicesSection";
 import FeaturedProjectRow from "../components/landing/FeaturedProjectRow";
 import "./LandingPage.css";
 import CollabsSlider from "../components/slider/slider";
+import BrandName from "../components/BrandName";
 const LandingPage = () => {
 
   const projects = [
@@ -21,7 +22,7 @@ const LandingPage = () => {
     <div className="landing-page">
 
       <Hero
-        title="LaBio Media"
+        title={<BrandName />}
         heading="Creative Studio"
         subheading="Research Media Production at Turku Bioscience Centre "
         subtitle="Digital Print • Photography • Video Production • Web Development • Live Streaming"

@@ -4,6 +4,7 @@ import "./AboutPage.css";
 import Hero from "../components/Hero";
 import { Link } from "react-router-dom";
 import ProjectsCards from "../components/cards/cards";
+import BrandName from "../components/BrandName";
 
 const AboutPage = () => {
   // Correct array name
@@ -17,13 +18,13 @@ const AboutPage = () => {
   return (
     <div className="about-page">
       <Hero
-        title="About Labio Creative Studio"
+        title={<BrandName />}
         subtitle="Digital Print • Photography • Videography • Web Development"
       />
       <section>
         <h1>Bridging Science and Storytelling</h1>
         <p className="lead">
-          LABIO MEDIA creative studio is a multimedia production unit at Turku Bioscience Centre that supports scientists and researchers in communicating their work through clear, engaging, and visually compelling storytelling.
+          {<BrandName />}creative studio is a multimedia production unit at Turku Bioscience Centre that supports scientists and researchers in communicating their work through clear, engaging, and visually compelling storytelling.
 
           Established in 2017, the unit was created to respond to the growing demand for high-quality media production within the scientific community. The work is carried out by a dedicated multimedia specialist with a background spanning both science and media. Services include video production, photography, graphic design, and web development, all tailored to the specific needs of researchers and scientific institutions. Close collaboration with researchers ensures a deep understanding of their work and objectives, allowing complex scientific concepts to be translated into accessible and effective visual narratives for a wider audience.
         </p>
