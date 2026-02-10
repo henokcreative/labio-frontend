@@ -13,7 +13,7 @@ const LandingPage = () => {
     { title: "Web Design", imgUrl: "assets/projects/project2.jpg", link: "/web-design" },
     { title: "Video Production", imgUrl: "assets/projects/project3.jpg", link: "/videos" },
     { title: "Print Design", imgUrl: "assets/projects/project4.png", link: "/print-design" },
-    { title: "Live Streaming", imgUrl: "assets/projects/project5.png", link: "/live-stream" },
+    { title: "Live Streaming", imgUrl: "assets/projects/project5.jpg", link: "/live-stream" },
 
   ];
 
