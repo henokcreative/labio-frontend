@@ -8,7 +8,7 @@ const Navbar = () => {
   const toggleMenu = () => setIsOpen(!isOpen);
 
   return (
-    <nav className="navbar">
+    <nav className="navbar p-2 position-sticky top-0 bg-light d-flex align-items-center justify-content-between">
       <Link to="/">
         <img src="/assets/logo.svg" alt="Labio Logo" className="logo m-2" />
       </Link>
