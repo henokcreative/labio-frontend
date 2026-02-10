@@ -10,8 +10,8 @@ const TeamCard = ({ name, role, email, phone, imgUrl, link }) => {
       <p>{email}</p>
       <p>{phone}</p>
       {link && (
-        <a className="button btn" href={link} target="_self" rel="noopener noreferrer">
-          View CV
+        <a className="btn-primary btn" href={link} target="_self" rel="noopener noreferrer">
+          View my résumé
         </a>
       )}
     </div>

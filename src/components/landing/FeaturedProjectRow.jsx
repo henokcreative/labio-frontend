@@ -8,10 +8,10 @@ const FeaturedProjectRow = ({ title, imgUrl, link, reverse }) => {
   return (
     <div
       ref={ref}
-      className={`project-alt-row reveal ${reverse ? "reverse" : ""}`}
+      className={`project-alt-row border p-2 mb-2 border-opacity-25 rounded reveal ${reverse ? "reverse" : ""}`}
     >
       <div className="project-alt-text">
-        <h3>{title}</h3>
+        <h2 className="fw-bold">{title}</h2>
         <p>
           Explore our work in {title.toLowerCase()}, where creativity meets
           clean design and professional execution.

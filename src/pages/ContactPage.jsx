@@ -13,7 +13,7 @@ const ContactPage = () => {
   return (
     <div className="contact-page">
       {/* Team Section */}
-      <section className="team">
+      <section className="team mt-4">
         <h2 className="my-4">Contact</h2>
         {/* <p>Our creative professionals combine expertise in design, tech, and media.</p> */}
         <div className="team-grid">
