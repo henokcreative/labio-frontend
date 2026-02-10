@@ -1,4 +1,4 @@
-// src/components/collabsSlider.jsx
+// src/components/CollabsSlider.jsx
 import React from "react";
 import "./slider.css";
 
@@ -8,45 +8,40 @@ const logos = [
   { src: "/assets/logos/nms-logo.svg", url: "https://nordicmetsoc.org" },
   { src: "/assets/logos/BioCityLogoRGB.svg", url: "https://biocityturku.fi" },
   { src: "/assets/logos/initialise-logo.svg", url: "https://initialise-project.eu/" },
-
 ];
 
-const collabsSlider = () => {
-  const row = [...logos, ...logos]; // seamless loop
+const CollabsSlider = () => {
+  const loop = [...logos, ...logos];
 
   return (
     <section className="collab-section">
       <h3 className="collab-title">Trusted by & Collaborating With</h3>
 
       <div className="collab-slider">
-        {/* Top row */}
-        <div className="slider-track left">
-          {row.map((logo, i) => (
+        <div className="slider-row left">
+          {loop.map((logo, i) => (
             <a
-              key={`top-${i}`}
+              key={`left-${i}`}
               href={logo.url}
               target="_blank"
               rel="noopener noreferrer"
               className="slide"
-              aria-label="Collaborator website"
             >
-              <img className="p-2" src={logo.src} alt="Collaborator logo" />
+              <img src={logo.src} alt="Collaborator logo" />
             </a>
           ))}
         </div>
 
-        {/* Bottom row */}
-        <div className="slider-track right">
-          {row.map((logo, i) => (
+        <div className="slider-row right">
+          {loop.map((logo, i) => (
             <a
-              key={`bottom-${i}`}
+              key={`right-${i}`}
               href={logo.url}
               target="_blank"
               rel="noopener noreferrer"
               className="slide"
-              aria-label="Collaborator website"
             >
-              <img className="p-2" src={logo.src} alt="Collaborator logo" />
+              <img src={logo.src} alt="Collaborator logo" />
             </a>
           ))}
         </div>
@@ -55,4 +50,4 @@ const collabsSlider = () => {
   );
 };
 
-export default collabsSlider;
+export default CollabsSlider;
