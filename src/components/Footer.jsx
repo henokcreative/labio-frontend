@@ -11,7 +11,7 @@ const Footer = () => {
         <div className="d-flex flex-column flex-md-row w-100 align-items-md-center justify-content-between flex-wrap">
 
 
-          <div id="contactDetails">
+          <div id="contactDetails" className="my-3">
             <h4 className="my-3 contact-heading text-md-start">contact</h4>
             <div className="text-md-start contact-item">
               E-mail:{" "}
@@ -21,7 +21,7 @@ const Footer = () => {
             </div>
             <div className="contact-item text-md-start">Mobile: +358 45 6955689</div>
           </div>
-          <div>
+          <div id="footerLogo" className="my-3">
             <Link
               className="footer-logo"
               onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
