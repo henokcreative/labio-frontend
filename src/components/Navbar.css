@@ -20,9 +20,14 @@
   color: #333;
   font-weight: 500;
       padding: 0.5rem 2rem;
+  transition: color 0.3s ease;
+    text-transform: uppercase;
+
 
 }
-
+.nav-links a:hover {
+  color: var(--color-primary);
+}
 .hamburger {
   display: none;
   flex-direction: column;
