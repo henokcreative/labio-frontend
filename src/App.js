@@ -13,6 +13,8 @@ import Footer from "./components/Footer";
 import "./AppTypography.css";
 import LivestreamingPage from "./pages/LivestreamingPage";
 import PricingPage from "./pages/PricingPage";
+import OurWorkPage from "./pages/OurWorkPage";
+
 
 // import 'bootstrap/dist/css/bootstrap.min.css';
 import "./App.css";
@@ -25,6 +27,7 @@ function App() {
         <Routes>
           <Route path="/" element={<LandingPage />} />
           <Route path="/about" element={<AboutPage />} />
+          <Route path="/our-work" element={<OurWorkPage />} />
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/photos" element={<PhotosPage />} />
           <Route path="/web-design" element={<WebdesignPage />} />
