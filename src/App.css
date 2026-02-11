@@ -200,6 +200,7 @@ section {
     /* width: 350px; */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     aspect-ratio: 1/1 !important;
+    gap: 2rem;
 
 }
 
