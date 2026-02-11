@@ -9,37 +9,40 @@ const logos = [
   { src: "/assets/logos/BioCityLogoRGB.svg", url: "https://biocityturku.fi" },
   { src: "/assets/logos/initialise-logo.svg", url: "https://initialise-project.eu/" },
 ];
-
 const CollabsSlider = () => {
-  const loop = [...logos, ...logos];
+  const row = [...logos, ...logos]; // seamless loop
 
   return (
     <section className="collab-section">
       <h3 className="collab-title">Trusted by & Collaborating With</h3>
 
       <div className="collab-slider">
-        <div className="slider-row left">
-          {loop.map((logo, i) => (
+        {/* Top row */}
+        <div className="slider-track left">
+          {row.map((logo, i) => (
             <a
-              key={`left-${i}`}
+              key={`top-${i}`}
               href={logo.url}
               target="_blank"
               rel="noopener noreferrer"
               className="slide"
+              aria-label="Collaborator website"
             >
               <img src={logo.src} alt="Collaborator logo" />
             </a>
           ))}
         </div>
 
-        <div className="slider-row right">
-          {loop.map((logo, i) => (
+        {/* Bottom row */}
+        <div className="slider-track right">
+          {row.map((logo, i) => (
             <a
-              key={`right-${i}`}
+              key={`bottom-${i}`}
               href={logo.url}
               target="_blank"
               rel="noopener noreferrer"
               className="slide"
+              aria-label="Collaborator website"
             >
               <img src={logo.src} alt="Collaborator logo" />
             </a>

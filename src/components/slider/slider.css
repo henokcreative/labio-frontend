@@ -1,94 +1,92 @@
-/* Section */
 .collab-section {
-  padding: 4rem 0;
+  padding: 4rem 2rem;
+  overflow: hidden;
   background: #fafafa;
 }
 
-/* Title */
 .collab-title {
   text-align: center;
-  font-size: 0.95rem;
-  letter-spacing: 0.1em;
+  font-size: 1.1rem;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
-  margin-bottom: 2.5rem;
-  color: #777;
+  margin-bottom: 2rem;
+  color: #666;
 }
 
-/* FULL viewport breakout */
+/* Container */
 .collab-slider {
-  position: relative;
-  width: 100vw;
-  margin-left: calc(50% - 50vw);
-  margin-right: calc(50% - 50vw);
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
   overflow: hidden;
 }
 
-/* Rows */
-.slider-row {
+/* Track */
+.slider-track {
   display: flex;
   width: max-content;
-  align-items: center;
-  gap: 4rem;
-  padding: 1rem 0;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
 }
 
-.slider-row.left {
-  animation: slide-left 35s linear infinite;
+.slider-track.left {
+  animation: scroll-left 40s linear infinite;
 }
 
-.slider-row.right {
-  animation: slide-right 40s linear infinite;
+.slider-track.right {
+  animation: scroll-right 45s linear infinite;
 }
 
-/* Slides */
+/* Individual logos */
 .slide {
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 0 2.5rem;
 }
 
 .slide img {
-  height: 52px;
-  max-width: 160px;
+  height: 50px;
+  max-width: 120px;
   object-fit: contain;
+
   filter: grayscale(100%) brightness(0.85);
   opacity: 0.7;
-  transition: transform 0.3s ease, filter 0.3s ease, opacity 0.3s ease;
+  transition: all 0.3s ease;
 }
 
+/* Hover effect */
 .slide img:hover {
-  filter: grayscale(0%) brightness(0.6);
+  filter: grayscale(0%) brightness(1);
   opacity: 1;
-  transform: scale(1.06);
+  transform: scale(1.05);
 }
 
-/* Pause animation on hover */
-.collab-slider:hover .slider-row {
+/* Pause on hover */
+.collab-slider:hover .slider-track {
   animation-play-state: paused;
 }
 
 /* Animations */
-@keyframes slide-left {
+@keyframes scroll-left {
   from {
     transform: translateX(0);
   }
   to {
-    transform: translateX(-75vw);
+    transform: translateX(-50%);
   }
 }
 
-@keyframes slide-right {
+@keyframes scroll-right {
   from {
-    transform: translateX(0);
+    transform: translateX(-50%);
   }
   to {
-    transform: translateX(75vw);
+    transform: translateX(0);
   }
 }
 
-/* Mobile */
+/* Responsive */
 @media (max-width: 768px) {
   .slide img {
     height: 40px;
