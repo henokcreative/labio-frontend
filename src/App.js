@@ -1,5 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { SpeedInsights } from "@vercel/speed-insights/react";
 import Navbar from "./components/Navbar";
 import LandingPage from "./pages/LandingPage";
 import AboutPage from "./pages/AboutPage";
@@ -39,6 +40,7 @@ function App() {
         </Routes>
         <Footer /> {/* consistent footer across all pages */}
       </div>
+      <SpeedInsights />
     </Router>
   );
 }
