@@ -19,7 +19,7 @@ const OurWorkPage = () => {
                 subtitle="A showcase of our multimedia projects in scientific communication."
             />
 
-            <section className="projects-alt-section col-md-10 container" id="projects">
+            <section className="projects-alt-section col col-md-10 container" id="projects">
                 {projects.map((project, idx) => (
                     <FeaturedProjectRow
                         key={idx}

@@ -159,6 +159,7 @@ section {
 
 
 /* Each project row */
+
 .project-alt-row {
     display: flex;
     align-items: center;
@@ -192,6 +193,7 @@ section {
 
 /* Image/card block */
 .project-alt-card {
+
     flex: 1;
     display: block;
     border-radius: 1rem;
@@ -200,6 +202,9 @@ section {
     /* width: 350px; */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     aspect-ratio: 1/1 !important;
+     position: relative;
+  display: block;
+  overflow: hidden;
     
 
 }
@@ -219,6 +224,38 @@ section {
 
 .project-alt-card img:hover {
     transform: scale(1.03);
+}
+
+.image-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+/* The overlay */
+.image-wrapper::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(20, 40, 60, 0.75); /* your overlay color */
+  z-index: 1;
+  transition: background 0.4s ease;
+}
+
+/* Make sure image sits below overlay */
+.image-wrapper img {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: transform 0.6s ease;
+}
+
+/* Hover effects */
+.project-alt-card:hover .image-wrapper::before {
+  background: rgba(20, 40, 60, 0.2);
+}
+
+.project-alt-card:hover img {
+  transform: scale(1.05);
 }
 
 /* RESPONSIVE */
@@ -272,6 +309,8 @@ section {
   opacity: 1;
   transform: translateY(0);
 }
+
+
 
 /* ===========================
    END OF FILE

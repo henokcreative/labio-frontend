@@ -21,9 +21,11 @@ const FeaturedProjectRow = ({ title, imgUrl, link, reverse }) => {
         </Link>
       </div>
 
-      <Link to={link} className="project-alt-card">
-        <img src={imgUrl} alt={title} />
-      </Link>
+<Link to={link} className="project-alt-card">
+  <div className="image-wrapper">
+    <img src={imgUrl} alt={title} className="img-fluid" />
+  </div>
+</Link>
     </div>
   );
 };
