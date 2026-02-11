@@ -33,7 +33,7 @@ const LandingPage = () => {
 
       <ServicesSection />
 
-      <section className="projects-alt-section col-8 container" id="projects">
+      <section className="projects-alt-section col-md-8 container" id="projects">
         {projects.map((project, idx) => (
           <FeaturedProjectRow
             key={idx}

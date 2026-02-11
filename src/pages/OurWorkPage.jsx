@@ -1,6 +1,5 @@
 import "./OurWorkPage.css";
 import Hero from "../components/Hero";
-import { Link } from "react-router-dom";
 import BrandName from "../components/BrandName";
 import FeaturedProjectRow from "../components/landing/FeaturedProjectRow";
 
@@ -20,7 +19,7 @@ const OurWorkPage = () => {
                 subtitle="A showcase of our multimedia projects in scientific communication."
             />
 
-            <section className="projects-alt-section col-md-8 container" id="projects">
+            <section className="projects-alt-section col-md-10 container" id="projects">
                 {projects.map((project, idx) => (
                     <FeaturedProjectRow
                         key={idx}
