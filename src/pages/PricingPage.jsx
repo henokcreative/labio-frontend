@@ -61,7 +61,7 @@ const PricingPage = () => {
   return (
     <div className="pricing-page">
       <Hero
-        title="Transparent & Flexible Pricing"
+        title="Flexible Pricing"
         subtitle="Clear starting points. Tailored solutions."
       />
 

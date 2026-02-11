@@ -23,7 +23,6 @@ const LandingPage = () => {
 
       <Hero
         title={<BrandName />}
-        heading="Creative Studio"
         subheading="Research Media Production at Turku Bioscience Centre "
         subtitle="Digital Print • Photography • Video Production • Web Development • Live Streaming"
         ctaText="View Our Work"
