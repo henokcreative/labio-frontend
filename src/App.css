@@ -246,8 +246,10 @@ section {
 .image-wrapper img {
   display: block;
   width: 100%;
-  height: auto;
+  /* height: auto; */
   transition: transform 0.6s ease;
+  object-fit: cover;
+  object-position: center center ;
 }
 
 /* Hover effects */
