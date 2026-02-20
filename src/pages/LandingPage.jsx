@@ -23,7 +23,7 @@ const LandingPage = () => {
 
       <Hero
         title={<BrandName />}
-        subheading="Research Media Production at Turku Bioscience Centre "
+        subheading="Research Media Production at Turku Bioscience Centre. "
         subtitle="Digital Print • Photography • Video Production • Web Development • Live Streaming"
         ctaText="View Our Work"
         ctaLink="#projects"
