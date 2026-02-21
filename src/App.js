@@ -15,6 +15,8 @@ import LivestreamingPage from "./pages/LivestreamingPage";
 import PricingPage from "./pages/PricingPage";
 import OurWorkPage from "./pages/OurWorkPage";
 import LoginPage from "./pages/LoginPage";
+import DashboardPage from "./pages/DashboardPage";
+
 
 
 
@@ -39,6 +41,7 @@ function App() {
           <Route path="/live-stream" element={<LivestreamingPage />} />
           <Route path="/pricing" element={<PricingPage />} />
           <Route path="/login" element={<LoginPage />} />
+          <Route path="/dashboard" element={<DashboardPage />} />
 
         </Routes>
         <Footer /> {/* consistent footer across all pages */}
