@@ -14,6 +14,8 @@ import "./AppTypography.css";
 import LivestreamingPage from "./pages/LivestreamingPage";
 import PricingPage from "./pages/PricingPage";
 import OurWorkPage from "./pages/OurWorkPage";
+import LoginPage from "./pages/LoginPage";
+
 
 
 // import 'bootstrap/dist/css/bootstrap.min.css';
@@ -36,6 +38,8 @@ function App() {
           <Route path="/henok-resume" element={<HenokResumePage />} />
           <Route path="/live-stream" element={<LivestreamingPage />} />
           <Route path="/pricing" element={<PricingPage />} />
+          <Route path="/login" element={<LoginPage />} />
+
         </Routes>
         <Footer /> {/* consistent footer across all pages */}
       </div>
