@@ -56,7 +56,7 @@ const LoginPage = () => {
                     type="password"
                     name="password"
                     placeholder="Password"
-                    value={credentials.username}
+                    value={credentials.password}
                     onChange={handleChange}
                     required
                 />
