@@ -53,4 +53,18 @@ const DashboardPage = () => {
             <section className="conversations">
                 <h3>Your Conversations</h3>
                 {conversations.length === 0 ? (
-                    <p>No conversations yet. We'
+                    <p>No conversations yet. We'll reach out to you soon!</p>
+                ) : (
+                    conversations.map((conv) => (
+                        <div key={conv.id} className="conversation-card">
+                            <h4>{conv.subject}</h4>
+                            <p>{conv.messages.length} messages</p>
+                        </div>
+                    ))
+                )}
+            </section>
+        </div>
+    );
+};
+
+export default DashboardPage;
