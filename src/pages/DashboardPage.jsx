@@ -13,10 +13,10 @@ const DashboardPage = () => {
     const navigate = useNavigate();
     const token = localStorage.getItem("access_token");
 
-    useEffect(() => {
-        if (!token) { navigate("/login"); return; }
-        fetchConversations();
-    }, []);
+useEffect(() => {
+    if (!token) { navigate("/login"); return; }
+    fetchConversations();
+}, []); // eslint-disable-line react-hooks/exhaustive-deps
     const fetchConversations = async () => {
         try {
             const res = await fetch(`${API}/api/messaging/conversations/`, {
