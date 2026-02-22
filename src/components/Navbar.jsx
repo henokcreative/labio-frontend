@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import "./Navbar.css";
+const API = process.env.REACT_APP_API_URL;
+
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -14,7 +16,7 @@ const Navbar = () => {
     if (!isLoggedIn) return;
     const fetchUnread = async () => {
       try {
-        const res = await fetch("https://labio-backend.onrender.com/api/messaging/unread/", {
+        const res = await fetch(`${API}/api/messaging/unread/`, {
           headers: { Authorization: `Bearer ${localStorage.getItem("access_token")}` },
         });
         if (res.ok) {

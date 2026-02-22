@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./DashboardPage.css";
 
-const API = "https://labio-backend.onrender.com";
+const API = process.env.REACT_APP_API_URL;
 
 const DashboardPage = () => {
     const [conversations, setConversations] = useState([]);
@@ -13,11 +13,10 @@ const DashboardPage = () => {
     const navigate = useNavigate();
     const token = localStorage.getItem("access_token");
 
- useEffect(() => {
-    if (!token) { navigate("/login"); return; }
-    fetchConversations();
-}, []); // eslint-disable-line react-hooks/exhaustive-deps
-
+    useEffect(() => {
+        if (!token) { navigate("/login"); return; }
+        fetchConversations();
+    }, []);
     const fetchConversations = async () => {
         try {
             const res = await fetch(`${API}/api/messaging/conversations/`, {

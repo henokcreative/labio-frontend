@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./ContactForm.css";
 
-const API_URL = "https://labio-backend.onrender.com/api/contacts/submit/";
+const API = process.env.REACT_APP_API_URL;
 
 const ContactForm = () => {
     const [formData, setFormData] = useState({ name: "", email: "", message: "" });
@@ -19,7 +19,7 @@ const ContactForm = () => {
         setLoading(true);
 
         try {
-            const response = await fetch(API_URL, {
+            const response = await fetch(`${API}/api/contacts/submit/`, {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(formData),

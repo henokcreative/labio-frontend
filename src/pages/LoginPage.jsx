@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./LoginPage.css";
+const API = process.env.REACT_APP_API_URL;
 
 const LoginPage = () => {
     const [credentials, setCredentials] = useState({ username: "", password: "" });
@@ -18,7 +19,7 @@ const LoginPage = () => {
         setLoading(true);
 
         try {
-            const response = await fetch("https://labio-backend.onrender.com/api/auth/login/", {
+            const response = await fetch(`${API}/api/auth/login/`, {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(credentials),
