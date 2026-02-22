@@ -26,12 +26,18 @@ const LoginPage = () => {
             });
 
             const data = await response.json();
+if (response.ok) {
+    localStorage.setItem("access_token", data.access);
+    localStorage.setItem("refresh_token", data.refresh);
 
-            if (response.ok) {
-                localStorage.setItem("access_token", data.access);
-                localStorage.setItem("refresh_token", data.refresh);
-                navigate("/dashboard");
-            } else {
+    // decode token to check if staff
+    const payload = JSON.parse(atob(data.access.split('.')[1]));
+    if (payload.is_staff) {
+        navigate("/staff/messages");
+    } else {
+        navigate("/dashboard");
+    }
+} else {
                 setError("Invalid username or password.");
             }
         } catch (err) {

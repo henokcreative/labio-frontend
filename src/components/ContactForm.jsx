@@ -39,47 +39,54 @@ const ContactForm = () => {
         }
     };
 
-    return (
-        <div className="contact-form-container">
-            {success && (
-                <p className="success-message">
-                    Message sent successfully! We'll get back to you soon.
-                </p>
-            )}
-            {error && <p className="error-message">{error}</p>}
-
-            {!success && (
-                <form onSubmit={handleSubmit}>
-                    <input
-                        type="text"
-                        name="name"
-                        placeholder="Name"
-                        value={formData.name}
-                        onChange={handleChange}
-                        required
-                    />
-                    <input
-                        type="email"
-                        name="email"
-                        placeholder="Email"
-                        value={formData.email}
-                        onChange={handleChange}
-                        required
-                    />
-                    <textarea
-                        name="message"
-                        placeholder="Your message"
-                        value={formData.message}
-                        onChange={handleChange}
-                        required
-                    ></textarea>
-                    <button type="submit" className="btn button" disabled={loading}>
-                        {loading ? "Sending..." : "Send Message"}
-                    </button>
-                </form>
-            )}
+  return (
+    <div className="contact-form-container">
+        <div className="login-brand">
+            <span className="login-brand-dot" />
+            <span>LaBio<strong>Media</strong></span>
         </div>
-    );
+        <h1 className="login-title">Get In Touch</h1>
+        <p className="login-sub">Send us a message and we will respond promptly</p>
+
+        {success && (
+            <p className="success-message">
+                Message sent successfully! We&apos;ll get back to you soon.
+            </p>
+        )}
+        {error && <p className="error-message">{error}</p>}
+
+        {!success && (
+            <form onSubmit={handleSubmit}>
+                <input
+                    type="text"
+                    name="name"
+                    placeholder="Name"
+                    value={formData.name}
+                    onChange={handleChange}
+                    required
+                />
+                <input
+                    type="email"
+                    name="email"
+                    placeholder="Email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    required
+                />
+                <textarea
+                    name="message"
+                    placeholder="Your message"
+                    value={formData.message}
+                    onChange={handleChange}
+                    required
+                ></textarea>
+                <button type="submit" className="btn button" disabled={loading}>
+                    {loading ? "Sending..." : "Send Message"}
+                </button>
+            </form>
+        )}
+    </div>
+);
 };
 
 export default ContactForm;

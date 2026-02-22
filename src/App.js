@@ -16,6 +16,8 @@ import PricingPage from "./pages/PricingPage";
 import OurWorkPage from "./pages/OurWorkPage";
 import LoginPage from "./pages/LoginPage";
 import DashboardPage from "./pages/DashboardPage";
+import StaffmessagingPage from "./pages/StaffmessagingPage";
+
 
 
 
@@ -42,6 +44,8 @@ function App() {
           <Route path="/pricing" element={<PricingPage />} />
           <Route path="/login" element={<LoginPage />} />
           <Route path="/dashboard" element={<DashboardPage />} />
+          <Route path="/staff/messages" element={<StaffmessagingPage />} />
+
 
         </Routes>
         <Footer /> {/* consistent footer across all pages */}

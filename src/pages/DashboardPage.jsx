@@ -100,57 +100,57 @@ const DashboardPage = () => {
             <main className="dash-main">
                 {error && <div className="dash-error">{error}</div>}
 
-                {!activeConvFull ? (
-                    <div className="dash-welcome">
-                        <div className="dash-welcome-icon">✦</div>
-                        <h2>Welcome to your portal</h2>
-                        <p>Your conversations with LaBioMedia will appear here.</p>
-                    </div>
-                ) : (
-                    <>
-                        {/* Header */}
-                        <div className="dash-conv-header">
-                            <h2>{activeConvFull.subject}</h2>
-                            <span className="dash-conv-badge">{activeConvFull.messages.length} messages</span>
-                        </div>
+ {!activeConvFull ? (
+    <div className="dash-welcome">
+        <div className="dash-welcome-icon">✦</div>
+        <h2>Welcome to your portal</h2>
+        <p>Your conversations with LaBioMedia will appear here.</p>
+    </div>
+) : (
+    <div className="dash-conv-wrapper">
+        {/* Header */}
+        <div className="dash-conv-header">
+            <h2>{activeConvFull.subject}</h2>
+            <span className="dash-conv-badge">{activeConvFull.messages.length} messages</span>
+        </div>
 
-                        {/* Messages */}
-                        <div className="dash-messages">
-                            {activeConvFull.messages.length === 0 ? (
-                                <div className="dash-no-messages">No messages yet — send one below!</div>
-                            ) : (
-                                activeConvFull.messages.map((msg) => {
-                                    const isMe = msg.sender_username === activeConvFull.client_username;
-                                    return (
-                                        <div key={msg.id} className={`dash-msg ${isMe ? "dash-msg-mine" : "dash-msg-theirs"}`}>
-                                            <div className="dash-msg-sender">{isMe ? "You" : "LaBioMedia"}</div>
-                                            <div className="dash-msg-body">{msg.body}</div>
-                                            <div className="dash-msg-time">
-                                                {new Date(msg.created_at).toLocaleString()}
-                                            </div>
-                                        </div>
-                                    );
-                                })
-                            )}
+        {/* Messages */}
+        <div className="dash-messages">
+            {activeConvFull.messages.length === 0 ? (
+                <div className="dash-no-messages">No messages yet — send one below!</div>
+            ) : (
+                activeConvFull.messages.map((msg) => {
+                    const isMe = msg.sender_username === activeConvFull.client_username;
+                    return (
+                        <div key={msg.id} className={`dash-msg ${isMe ? "dash-msg-mine" : "dash-msg-theirs"}`}>
+                            <div className="dash-msg-sender">{isMe ? "You" : "LaBioMedia"}</div>
+                            <div className="dash-msg-body">{msg.body}</div>
+                            <div className="dash-msg-time">
+                                {new Date(msg.created_at).toLocaleString()}
+                            </div>
                         </div>
+                    );
+                })
+            )}
+        </div>
 
-                        {/* Reply box */}
-                        <form className="dash-reply" onSubmit={handleSend}>
-                            <textarea
-                                value={newMessage}
-                                onChange={(e) => setNewMessage(e.target.value)}
-                                placeholder="Write your message..."
-                                rows={3}
-                                onKeyDown={(e) => {
-                                    if (e.key === "Enter" && !e.shiftKey) { e.preventDefault(); handleSend(e); }
-                                }}
-                            />
-                            <button type="submit" disabled={sending || !newMessage.trim()}>
-                                {sending ? "Sending..." : "Send"}
-                            </button>
-                        </form>
-                    </>
-                )}
+        {/* Reply box */}
+        <form className="dash-reply" onSubmit={handleSend}>
+            <textarea
+                value={newMessage}
+                onChange={(e) => setNewMessage(e.target.value)}
+                placeholder="Write your message..."
+                rows={3}
+                onKeyDown={(e) => {
+                    if (e.key === "Enter" && !e.shiftKey) { e.preventDefault(); handleSend(e); }
+                }}
+            />
+            <button type="submit" disabled={sending || !newMessage.trim()}>
+                {sending ? "Sending..." : "Send"}
+            </button>
+        </form>
+    </div>
+)}
             </main>
         </div>
     );
