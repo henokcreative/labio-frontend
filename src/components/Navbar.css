@@ -67,6 +67,66 @@
   }
 }
 .logo {
-  height: 50px; /* adjust as needed */
+  height: 60px; /* adjust as needed */
   width: auto;
+}
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.login-icon-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--color-text);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.4rem;
+  border-radius: 50%;
+  transition: color var(--transition), background var(--transition);
+  position: relative;
+  box-shadow: none;
+  margin: 0;
+}
+
+.login-icon-btn:hover {
+  color: var(--color-primary);
+  background: #fef2f2;
+}
+
+.login-icon-dot {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--color-primary);
+  border: 1.5px solid white;
+}
+
+.nav-links a.active {
+  color: var(--color-primary);
+  position: relative;
+}
+
+.nav-links a.active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 30%;
+  height: 2.5px;
+  background: var(--color-primary);
+  border-radius: 2px;
+  animation: underlineIn 0.2s ease forwards;
+}
+
+@keyframes underlineIn {
+  from { width: 0%; opacity: 0; }
+  to   { width: 30%; opacity: 1; }
 }
