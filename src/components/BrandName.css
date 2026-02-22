@@ -1,0 +1,22 @@
+.brand-name {
+  text-transform: uppercase !important;
+  font-weight: 800 !important;
+  letter-spacing: 0 !important;
+  display: inline-flex;
+ align-items: center;
+    gap:0rem;
+}
+.brand-dot {
+  width: 2rch;
+  height: 2rch;
+  border-radius: 50%;
+  background: var(--color-primary);
+  display: inline-block;
+  margin-right:3px;
+}
+
+.brand-accent {
+ 
+  color: var(--color-primary) !important;
+}
+

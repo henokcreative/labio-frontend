@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import "./Navbar.css";
+import BrandName from "./BrandName";
 const API = process.env.REACT_APP_API_URL;
 
 
@@ -38,7 +39,9 @@ const Navbar = () => {
   return (
     <nav className="navbar p-2 position-sticky top-0 bg-light d-flex align-items-center justify-content-between">
       <NavLink to="/">
-        <img src="/assets/logo.svg" alt="Labio Logo" className="logo m-2" />
+        <h3 className="mb-0">
+          <BrandName showDot={true} />
+        </h3>
       </NavLink>
 
       <div className={`nav-links ${isOpen ? "open" : ""}`}>

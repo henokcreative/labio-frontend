@@ -1,7 +1,10 @@
-// components/BrandName.jsx
-const BrandName = () => (
+import "./BrandName.css";
+
+const BrandName = ({ showDot = false }) => (
   <span className="brand-name">
-    L<span className="brand-accent">A</span>B<span className="brand-accent">io</span> M<span className="brand-accent">edia</span>
+    {showDot && <span className="brand-dot" />}
+    <span className="text-dark">LABIO</span>
+    <span className="brand-accent">MEDIA</span>
   </span>
 );
 

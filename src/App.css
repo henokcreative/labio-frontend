@@ -81,16 +81,6 @@ input {
    broad section spacing
 =========================== */
 
-.brand-name {
-  text-transform: uppercase;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-}
-
-.brand-accent {
-  text-transform: lowercase;
-  font-family: var(--font-body);
-}
 /* ===========================
    SECTIONS
 =========================== */
