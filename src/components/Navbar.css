@@ -130,3 +130,21 @@
   from { width: 0%; opacity: 0; }
   to   { width: 30%; opacity: 1; }
 }
+
+.login-icon-badge {
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--color-primary);
+  color: white;
+  font-size: 0.6rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1.5px solid white;
+  font-family: var(--font-heading);
+}

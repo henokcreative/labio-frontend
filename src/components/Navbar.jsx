@@ -1,34 +1,50 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { NavLink, useNavigate } from "react-router-dom";
 import "./Navbar.css";
-import { NavLink, Link, useNavigate } from "react-router-dom";
+
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [unread, setUnread] = useState(0);
   const navigate = useNavigate();
   const isLoggedIn = !!localStorage.getItem("access_token");
 
   const toggleMenu = () => setIsOpen(!isOpen);
 
+  useEffect(() => {
+    if (!isLoggedIn) return;
+    const fetchUnread = async () => {
+      try {
+        const res = await fetch("https://labio-backend.onrender.com/api/messaging/unread/", {
+          headers: { Authorization: `Bearer ${localStorage.getItem("access_token")}` },
+        });
+        if (res.ok) {
+          const data = await res.json();
+          setUnread(data.unread);
+        }
+      } catch {}
+    };
+    fetchUnread();
+    const interval = setInterval(fetchUnread, 30000); // check every 30 seconds
+    return () => clearInterval(interval);
+  }, [isLoggedIn]);
+
   const handleLoginClick = () => {
     setIsOpen(false);
-    if (isLoggedIn) {
-      navigate("/dashboard");
-    } else {
-      navigate("/login");
-    }
+    navigate(isLoggedIn ? "/dashboard" : "/login");
   };
 
   return (
     <nav className="navbar p-2 position-sticky top-0 bg-light d-flex align-items-center justify-content-between">
-      <Link to="/">
+      <NavLink to="/">
         <img src="/assets/logo.svg" alt="Labio Logo" className="logo m-2" />
-      </Link>
+      </NavLink>
 
       <div className={`nav-links ${isOpen ? "open" : ""}`}>
-<NavLink to="/" end onClick={() => setIsOpen(false)}>Home</NavLink>
-<NavLink to="/about" onClick={() => setIsOpen(false)}>About</NavLink>
-<NavLink to="/our-work" onClick={() => setIsOpen(false)}>Our Work</NavLink>
-<NavLink to="/pricing" onClick={() => setIsOpen(false)}>Pricing</NavLink>
-<NavLink to="/contact" onClick={() => setIsOpen(false)}>Contact</NavLink>
+        <NavLink to="/" end onClick={() => setIsOpen(false)}>Home</NavLink>
+        <NavLink to="/about" onClick={() => setIsOpen(false)}>About</NavLink>
+        <NavLink to="/our-work" onClick={() => setIsOpen(false)}>Our Work</NavLink>
+        <NavLink to="/pricing" onClick={() => setIsOpen(false)}>Pricing</NavLink>
+        <NavLink to="/contact" onClick={() => setIsOpen(false)}>Contact</NavLink>
       </div>
 
       <div className="navbar-right">
@@ -37,7 +53,8 @@ const Navbar = () => {
             <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
             <circle cx="12" cy="7" r="4"/>
           </svg>
-          {isLoggedIn && <span className="login-icon-dot" />}
+          {unread > 0 && <span className="login-icon-badge">{unread}</span>}
+          {isLoggedIn && unread === 0 && <span className="login-icon-dot" />}
         </button>
 
         <div className="hamburger" onClick={toggleMenu}>
