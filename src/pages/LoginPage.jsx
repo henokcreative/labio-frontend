@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import "./LoginPage.css";
 
 const LoginPage = () => {
     const [credentials, setCredentials] = useState({ username: "", password: "" });
@@ -41,29 +42,47 @@ const LoginPage = () => {
 
     return (
         <div className="login-page">
-            <h2>Client Login</h2>
-            {error && <p className="error-message">{error}</p>}
-            <form onSubmit={handleSubmit}>
-                <input
-                    type="text"
-                    name="username"
-                    placeholder="Username"
-                    value={credentials.username}
-                    onChange={handleChange}
-                    required
-                />
-                <input
-                    type="password"
-                    name="password"
-                    placeholder="Password"
-                    value={credentials.password}
-                    onChange={handleChange}
-                    required
-                />
-                <button type="submit" disabled={loading}>
-                    {loading ? "Logging in..." : "Login"}
-                </button>
-            </form>
+            <div className="login-bg" />
+            <div className="login-card">
+                <div className="login-brand">
+                    <span className="login-brand-dot" />
+                    <span>LaBio<strong>Media</strong></span>
+                </div>
+                <h1 className="login-title">Client Portal</h1>
+                <p className="login-sub">Sign in to access your workspace</p>
+
+                {error && <div className="login-error">{error}</div>}
+
+                <form onSubmit={handleSubmit} className="login-form">
+                    <div className="login-field">
+                        <label>Username</label>
+                        <input
+                            type="text"
+                            name="username"
+                            placeholder="Enter your username"
+                            value={credentials.username}
+                            onChange={handleChange}
+                            required
+                            autoComplete="username"
+                        />
+                    </div>
+                    <div className="login-field">
+                        <label>Password</label>
+                        <input
+                            type="password"
+                            name="password"
+                            placeholder="Enter your password"
+                            value={credentials.password}
+                            onChange={handleChange}
+                            required
+                            autoComplete="current-password"
+                        />
+                    </div>
+                    <button type="submit" className="login-btn" disabled={loading}>
+                        {loading ? <span className="login-spinner" /> : "Sign In"}
+                    </button>
+                </form>
+            </div>
         </div>
     );
 };
