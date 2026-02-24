@@ -16,7 +16,7 @@ const FeaturedProjectRow = ({ title, imgUrl, link, reverse }) => {
           Explore our work in {title.toLowerCase()}, where creativity meets
           clean design and professional execution.
         </p>
-        <Link to={link} className="view-link btn btn-primary">
+        <Link to={link} className="view-link btn btn-brand">
           View Projects →
         </Link>
       </div>

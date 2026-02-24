@@ -28,7 +28,7 @@ const Footer = () => {
               onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
             >
               <h3 className="text-light">
-                <BrandName showDot={true} />
+                <BrandName showDot={true} variant="light"/>
               </h3>
               {/* <img src="/assets/logo.svg" alt="Labio Logo" className="footer-logo-img m-2" /> */}
             </Link>

@@ -40,7 +40,7 @@ const Navbar = () => {
     <nav className="navbar p-2 position-sticky top-0 bg-light d-flex align-items-center justify-content-between">
       <NavLink to="/">
         <h3 className="mb-0">
-          <BrandName showDot={true} />
+          <BrandName variant="dark"/>
         </h3>
       </NavLink>
 

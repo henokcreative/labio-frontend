@@ -1,7 +1,15 @@
 import React from "react";
 import "./Hero.css";
 
-const Hero = ({ title, heading, subheading, subtitle, ctaText, ctaLink }) => {
+const Hero = ({
+  title,
+  heading,
+  subheading,
+  subtitle,
+  ctaText,
+  ctaLink,
+  affiliates = []   // 👈 default empty array
+}) => {
 
   const smoothScroll = (e) => {
     e.preventDefault();
@@ -23,11 +31,34 @@ const Hero = ({ title, heading, subheading, subtitle, ctaText, ctaLink }) => {
         <p className="mt-0 fw-bold">{subtitle}</p>
 
         {ctaText && ctaLink && (
-          <a href={ctaLink} onClick={smoothScroll} className="btn btn-primary">
+          <a href={ctaLink} onClick={smoothScroll} className="btn btn-brand mt-4">
             {ctaText}
           </a>
         )}
+
+        {/* 👇 Only render if affiliates exist */}
+        {affiliates.length > 0 && (
+          <div className="affiliates ">
+            {affiliates.map((partner, index) => (
+              <a
+                key={index}
+                href={partner.url || "#"}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="aff-logo"
+              >
+                <img
+                  src={partner.logo}
+                  alt={`${partner.name} logo`}
+                  className="aff-logo-img"
+                />
+              </a>
+            ))}
+          </div>
+        )}
       </div>
+
+      <div className="hero-overlay"></div>
     </section>
   );
 };

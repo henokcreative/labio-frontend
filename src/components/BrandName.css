@@ -7,8 +7,8 @@
     gap:0rem;
 }
 .brand-dot {
-  width: 2rch;
-  height: 2rch;
+  width: 0.6rem;
+  height: 0.6rem;
   border-radius: 50%;
   background: var(--color-primary);
   display: inline-block;
@@ -19,4 +19,10 @@
  
   color: var(--color-primary) !important;
 }
+.brand-name.dark .brand-labio {
+  color: #111;
+}
 
+.brand-name.light .brand-labio {
+  color: #fff;
+}

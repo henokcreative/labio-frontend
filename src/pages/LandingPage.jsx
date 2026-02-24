@@ -17,16 +17,23 @@ const LandingPage = () => {
     { title: "Live Streaming", imgUrl: "assets/projects/project5.jpg", link: "/live-stream" },
 
   ];
+  
 
   return (
     <div className="landing-page">
 
       <Hero
-        title={<BrandName />}
+        title={<h2 className="mb-0"><BrandName showDot={true} /></h2>}
         subheading="Research Media Production at Turku Bioscience Centre. "
         subtitle="Digital Print • Photography • Video Production • Web Development • Live Streaming"
         ctaText="View Our Work"
         ctaLink="#projects"
+        affiliates={ [
+          {name: "TBC", logo: "/assets/logos/tbc-logo.svg", url: "https://bioscience.fi", className: "aff-logo-img" },
+          {name: "utu", logo: "/assets/logos/utu-logo.svg", url: "https://utu.fi", className: "aff-logo-img" },
+          {name: "abo", logo: "/assets/logos/abo-logo.svg", url: "https://abo.fi", className: "aff-logo-img" },
+
+        ]}
       />
 
       <MissionSection />
