@@ -22,7 +22,7 @@ const AboutPage = () => {
         subtitle="Digital Print • Photography • Videography • Web Development"
       />
       <section>
-        <h1>Bridging Science and Storytelling</h1>
+        <h3>Bridging Science and Storytelling</h3>
         <p className="lead">
           {<BrandName />}creative studio is a multimedia production unit at Turku Bioscience Centre that supports scientists and researchers in communicating their work through clear, engaging, and visually compelling storytelling.
 
@@ -31,7 +31,7 @@ const AboutPage = () => {
       </section>
 
       <section >
-        <h1>The Unsung Role of Multimedia in Modern Science Communication</h1>
+        <p className="blockquote">The Unsung Role of Multimedia in Modern Science Communication</p>
         <p>
           Science has always been about discovery — but discovery alone isn’t enough. In a world saturated with information, even the most groundbreaking research risks being overlooked if it isn’t communicated clearly and compellingly. This is where multimedia steps in, quietly transforming how science is seen, understood, and shared.
           As research becomes increasingly interdisciplinary and global, visuals play a critical role in connecting people to complex ideas. A well-designed figure can make data more intuitive. A short video can reveal the human story behind a study. A well-structured webpage can turn dense research outputs into accessible narratives for policymakers, funders, and the public.
