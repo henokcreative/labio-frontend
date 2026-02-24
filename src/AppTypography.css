@@ -174,7 +174,7 @@ p {
   margin: 1rem auto;
   line-height: 1.6;
   text-align: center;
-  max-width: 800px !important;
+  max-width: 80vw !important;
   font-family: var(--font-body) !important;
 }
 
