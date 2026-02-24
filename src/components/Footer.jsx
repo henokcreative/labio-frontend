@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Footer.css";
+import BrandName from "./BrandName";
 
 const Footer = () => {
   return (
@@ -26,7 +27,10 @@ const Footer = () => {
               className="footer-logo"
               onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
             >
-              <img src="/assets/logo.svg" alt="Labio Logo" className="footer-logo-img m-2" />
+              <h3 className="text-light">
+                <BrandName showDot={true} />
+              </h3>
+              {/* <img src="/assets/logo.svg" alt="Labio Logo" className="footer-logo-img m-2" /> */}
             </Link>
           </div>
         </div>
