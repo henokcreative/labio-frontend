@@ -2,121 +2,91 @@
    Custom Self-Hosted Fonts
 --------------------------------*/
 @font-face {
-  font-family: "Montserrat";
-  src: url("./fonts/Montserrat/Montserrat-Regular.woff2") format("woff2");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
+    font-family: "Montserrat";
+    src: url("./fonts/Montserrat/Montserrat-Regular.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
-  font-family: "Montserrat";
-  src: url("./fonts/Montserrat/Montserrat-Bold.woff2") format("woff2");
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
+    font-family: "Montserrat";
+    src: url("./fonts/Montserrat/Montserrat-Bold.woff2") format("woff2");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
-  font-family: "Montserrat";
-  src: url("./fonts/Montserrat/Montserrat-SemiBold.woff2") format("woff2");
-  font-weight: 600;
-  font-style: normal;
-  font-display: swap;
-}
-
-/* Optional Italic */
-@font-face {
-  font-family: "Montserrat";
-  src: url("./fonts/Montserrat/Montserrat-Italic.woff2") format("woff2");
-  font-weight: 400;
-  font-style: italic;
-  font-display: swap;
+    font-family: "Montserrat";
+    src: url("./fonts/Montserrat/Montserrat-SemiBold.woff2") format("woff2");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
-  font-family: "Poppins";
-  src: url("./fonts/Poppins/Poppins-Regular.woff2") format("woff2");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
+    font-family: "Montserrat";
+    src: url("./fonts/Montserrat/Montserrat-Italic.woff2") format("woff2");
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
 }
 
 @font-face {
-  font-family: "Poppins";
-  src: url("./fonts/Poppins/Poppins-Bold.woff2") format("woff2");
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
+    font-family: "Poppins";
+    src: url("./fonts/Poppins/Poppins-Regular.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
-  font-family: "Poppins";
-  src: url("./fonts/Poppins/Poppins-SemiBold.woff2") format("woff2");
-  font-weight: 600;
-  font-style: normal;
-  font-display: swap;
+    font-family: "Poppins";
+    src: url("./fonts/Poppins/Poppins-Bold.woff2") format("woff2");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
 }
 
-/* Optional Italic */
 @font-face {
-  font-family: "Poppins";
-  src: url("./fonts/Poppins/Poppins-Italic.woff2") format("woff2");
-  font-weight: 400;
-  font-style: italic;
-  font-display: swap;
+    font-family: "Poppins";
+    src: url("./fonts/Poppins/Poppins-SemiBold.woff2") format("woff2");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
 }
+
+@font-face {
+    font-family: "Poppins";
+    src: url("./fonts/Poppins/Poppins-Italic.woff2") format("woff2");
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+}
+
+/* ===========================
+   TYPOGRAPHY VARIABLES
+=========================== */
 :root {
-    /* Colors */
-    --color-primary: #df4646;
-    --color-primary-dark: #b73636;
-    --color-bg: #ffffff;
-    --color-text: #222222;
-    --color-muted: #666666;
-    --color-light: #f7f7f7;
-
-    /* Font Sizes */
-    --fs-h1: clamp(2rem, 1.6rem + 3.2vw, 3rem);
-    --fs-h2: clamp(1.6rem, 1.2rem + 2.4vw, 2.4rem);
-    --fs-h3: clamp(1.2rem, 1rem + 1.6vw, 1.8rem);
-    --fs-h4: clamp(1rem, 0.9rem + 1vw, 1.4rem);
-    --fs-body: clamp(0.9rem, 0.8rem + 0.4vw, 1rem);
-
-    /* Spacing */
-    --spacing-section: 2rem;
-    --spacing-card: 1.5rem;
-
-    /* Radius */
-    --radius: 12px;
-
-    /* Shadows */
-    --shadow-soft: 0 4px 10px rgba(0, 0, 0, 0.08);
-    --shadow-medium: 0 6px 20px rgba(0, 0, 0, 0.12);
-
-    /* Transitions */
-    --transition: 0.3s ease;
-
-    /*font families */
-      --font-heading: "Montserrat", sans-serif;
-        --font-body: "Poppins", sans-serif;
-
+    --font-heading: "Montserrat", sans-serif;
+    --font-body: "Poppins", sans-serif;
 }
-/* ========== GLOBAL TYPOGRAPHY ========== */
 
-/* Base settings */
+/* ===========================
+   GLOBAL TYPOGRAPHY
+=========================== */
 body {
-  font-family: var(--font-body) !important;
-  color: #222;
-  line-height: 1.6;
-  margin: 0 auto;
-  padding: 0;
-  font-size: 16px;
+    font-family: var(--font-body);
+    color: #222;
+    line-height: 1.6;
+    margin: 0 auto;
+    padding: 0;
+    font-size: 16px;
 }
 
 #root {
-  margin: 0 auto;
-
-
+    margin: 0 auto;
 }
 
 /* Headings */
@@ -126,56 +96,55 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: var(--font-heading);
-  color: var(--color-primary) !important;
-  margin: 2rem auto 1rem;
-  line-height: 1.2;
-  text-align: center !important;
-  max-width: 70vw !important;
-  text-transform: uppercase;
-  margin-bottom: 1.5rem !important;
-
+    font-family: var(--font-heading);
+    color: var(--color-primary);
+    margin: 2rem auto 1rem;
+    line-height: 1.2;
+    text-align: center;
+    max-width: 70vw;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
 }
 
 h1 {
-  font-size: 2.5rem;
-  font-weight: 700 !important;
+    font-size: 2.5rem;
+    font-weight: 700;
 }
 
 h2 {
-  font-size: 2rem;
-  font-weight: 600;
+    font-size: 2rem;
+    font-weight: 600;
 }
 
 h3 {
-  font-size: 1.75rem;
-  font-weight: 500;
+    font-size: 1.75rem;
+    font-weight: 500;
 }
 
 h4 {
-  font-size: 1.5rem;
-  font-weight: 500;
+    font-size: 1.5rem;
+    font-weight: 500;
 }
 
 h5 {
-  font-size: 1.25rem;
-  font-weight: 500;
+    font-size: 1.25rem;
+    font-weight: 500;
 }
 
 h6 {
-  font-size: 1rem;
-  font-weight: 500;
+    font-size: 1rem;
+    font-weight: 500;
 }
 
 /* Paragraphs */
 p {
-  font-size: 1rem;
-  color: #444;
-  margin: 1rem auto;
-  line-height: 1.6;
-  text-align: center;
-  max-width: 70vw !important;
-  font-family: var(--font-body) !important;
+    font-size: 1rem;
+    color: #444;
+    margin: 1rem auto;
+    line-height: 1.6;
+    text-align: center;
+    max-width: 70vw;
+    font-family: var(--font-body);
 }
 
 /* Links */
@@ -187,151 +156,143 @@ a {
 
 a:hover {
     color: var(--color-text);
-    text-decoration: none !important;
-
+    text-decoration: none;
 }
 
 /* Lists */
 ul,
 ol {
-  margin: 0.5rem 0 1rem 1.5rem;
-  padding: 0;
+    margin: 0.5rem 0 1rem 1.5rem;
+    padding: 0;
 }
 
 li {
-  margin-bottom: 0.5rem;
+    margin-bottom: 0.5rem;
 }
 
 /* Inline text styles */
 strong,
 b {
-  font-weight: 600;
+    font-weight: 600;
 }
 
 em,
 i {
-  font-style: italic;
+    font-style: italic;
 }
 
 small {
-  font-size: 0.875rem;
-  color: #666;
+    font-size: 0.875rem;
+    color: #666;
 }
 
 /* Blockquotes */
 blockquote {
-  border-left: 4px solid #e63946;
-  padding-left: 1rem;
-  color: #666;
-  margin: 1rem 0;
-  font-style: italic;
+    border-left: 4px solid #e63946;
+    padding-left: 1rem;
+    color: #666;
+    margin: 1rem 0;
+    font-style: italic;
 }
 
 /* Code blocks */
 code {
-  font-family: "Courier New", Courier, monospace;
-  background-color: #f5f5f5;
-  padding: 2px 6px;
-  border-radius: 4px;
-  font-size: 0.95rem;
+    font-family: "Courier New", Courier, monospace;
+    background-color: #f5f5f5;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 0.95rem;
 }
 
 pre {
-  background-color: #f5f5f5;
-  padding: 1rem;
-  border-radius: 6px;
-  overflow-x: auto;
+    background-color: #f5f5f5;
+    padding: 1rem;
+    border-radius: 6px;
+    overflow-x: auto;
 }
 
 /* ===========================
    LINKS & BUTTONS
 =========================== */
-
-
 button,
 .btn {
     padding: 0.75rem 1.5rem;
-    background: var(--color-primary) !important;
-    color: white !important;
+    background: var(--color-primary);
+    color: white;
     border: none;
     border-radius: var(--radius);
     box-shadow: var(--shadow-soft);
     cursor: pointer;
     transition: var(--transition);
     width: fit-content;
-  margin: 1rem auto;
+    margin: 1rem auto;
 }
 
 button:hover,
 .btn:hover {
     background: var(--color-primary-dark);
     box-shadow: var(--shadow-medium);
-    color: var(--color-text) !important;
+    color: var(--color-text);
 }
-
 
 .btn-brand {
-  display: inline-block;
-  margin-top: 0.5rem;
-  padding: 0.4rem 0.8rem;
-  background-color: #ff0000; 
-  color: #fff;
-  border-radius: 0.5rem;
-  text-decoration: none;
-  transition: background-color 0.3s ease;
-  text-align: center;
+    display: inline-block;
+    margin-top: 0.5rem;
+    padding: 0.4rem 0.8rem;
+    background-color: #ff0000;
+    color: #fff;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    text-align: center;
 }
 
-
-/* Responsive text scaling */
+/* ===========================
+   RESPONSIVE TYPOGRAPHY
+=========================== */
 @media (max-width: 768px) {
-  h1 {
-    font-size: 2rem;
-  }
+    h1 {
+        font-size: 2rem;
+    }
 
-  h2 {
-    font-size: 1.75rem;
-  }
+    h2 {
+        font-size: 1.75rem;
+    }
 
-  h3 {
-    font-size: 1.5rem;
-  }
+    h3 {
+        font-size: 1.5rem;
+    }
 
-  h4 {
-    font-size: 1.25rem;
-  }
+    h4 {
+        font-size: 1.25rem;
+    }
 
-  p {
-    font-size: 0.95rem;
-  }
+    p {
+        font-size: 0.95rem;
+    }
 }
 
 @media (max-width: 480px) {
-  h1 {
-    font-size: 1.75rem;
-  }
+    h1 {
+        font-size: 1.75rem;
+    }
 
-  h2 {
-    font-size: 1.5rem;
-  }
+    h2 {
+        font-size: 1.5rem;
+    }
 
-  h3 {
-    font-size: 1.25rem;
-  }
+    h3 {
+        font-size: 1.25rem;
+    }
 
-  p {
-    font-size: 0.9rem;
-  }
+    p {
+        font-size: 0.9rem;
+    }
 }
 
-
-
-
-/* 1 per row on mobile */
 @media (max-width: 576px) {
-
-  .gallery-item {
-    flex: 1 1 45%;
-    max-width: 45%;
-  }
+    .gallery-item {
+        flex: 1 1 45%;
+        max-width: 45%;
+    }
 }

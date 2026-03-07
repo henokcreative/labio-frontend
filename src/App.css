@@ -31,9 +31,9 @@
     /* Transitions */
     --transition: 0.3s ease;
 
-    /*backgrounds*/
+    /* Backgrounds */
     --bg-light: #f6eded;
-    --bg-dark: #222222; 
+    --bg-dark: #222222;
 }
 
 /* ===========================
@@ -47,39 +47,37 @@
 
 /* Global */
 body {
-  margin: 0 auto;
-  background: var(--bg-light);
+    margin: 0 auto;
+    background: var(--bg-light);
 }
 
 /* Main layout */
 .app-wrapper {
-  width: 100%;
-  max-width: 2200px;
-  margin-inline: auto;
+    width: 100%;
+    max-width: 2200px;
+    margin-inline: auto;
 }
-html {
-  scroll-behavior: smooth;
-}
-textarea {
-  resize: vertical;
-  min-height: 100px;
-  font-family: var(--font-body);
-  font-size: var(--fs-body);
-}
-input {
-  font-family: var(--font-body);
-    font-size: var(--fs-body);
 
+html {
+    scroll-behavior: smooth;
 }
+
+textarea {
+    resize: vertical;
+    min-height: 100px;
+    font-family: var(--font-body);
+    font-size: var(--fs-body);
+}
+
+input {
+    font-family: var(--font-body);
+    font-size: var(--fs-body);
+}
+
 .bg-light {
     background-color: var(--bg-light) !important;
     background-attachment: fixed;
 }
-
-
-/* ===========================
-   broad section spacing
-=========================== */
 
 /* ===========================
    SECTIONS
@@ -112,27 +110,21 @@ section {
     margin: 0 auto;
 }
 
-
 /* ===========================
-   Project Cards GRID
+   GALLERY SECTION
 =========================== */
-/* ===== Gallery Section ===== */
 .gallery {
     padding: 60px 20px;
     text-align: center;
 }
 
-
-/* Use flexbox for clean layout */
 .gallery-flex {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 1rem;
-    /* padding: 0 2rem; */
 }
 
-/* Individual project cards */
 .gallery-item {
     flex: 1 1 50vw;
     max-width: 300px;
@@ -141,15 +133,12 @@ section {
     overflow: hidden;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s;
-    min-height: 300px !important;
+    min-height: 300px;
 }
 
-
-
-
-
-/* Each project row */
-
+/* ===========================
+   PROJECT ALTERNATING ROWS
+=========================== */
 .project-alt-row {
     display: flex;
     align-items: center;
@@ -158,20 +147,16 @@ section {
     gap: 40px;
 }
 
-/* Reverse row for alternating layout */
 .project-alt-row.reverse {
     flex-direction: row-reverse;
 }
 
-/* Text block */
 .project-alt-text {
     flex: 1;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
-  display: flex;
-  flex-direction: column;
 }
-
-
 
 .project-alt-text p {
     font-size: 1.1rem;
@@ -179,108 +164,71 @@ section {
     margin-bottom: 15px;
 }
 
-
-
-/* Image/card block */
 .project-alt-card {
-
     flex: 1;
-    display: block;
-    border-radius: 1rem;
+    position: relative;
     overflow: hidden;
-    max-height: 400px;
-    /* width: 350px; */
+    border-radius: 1rem;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    aspect-ratio: 1/1 !important;
-     position: relative;
-  display: block;
-  overflow: hidden;
-    
-
+    aspect-ratio: 1/1;
+    max-height: 400px;
 }
 
 .project-alt-card img {
     width: 100%;
-    height: 400px;
+    height: 100%;
     object-fit: cover;
+    object-position: center center;
+    border-radius: 1rem;
     transition: transform 0.3s ease;
-    border-radius: 1rem !important;
-        aspect-ratio: 1/1  !important;
-        object-position: center center;
-
-
-
-}
-
-.project-alt-card img:hover {
-    transform: scale(1.03);
-}
-
-.image-wrapper {
-  position: relative;
-  overflow: hidden;
-}
-
-/* The overlay */
-.image-wrapper::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(20, 40, 60, 0.75); /* your overlay color */
-  z-index: 1;
-  transition: background 0.4s ease;
-  backdrop-filter: blur(4px);
-}
-
-/* Make sure image sits below overlay */
-.image-wrapper img {
-  display: block;
-  width: 100%;
-  /* height: auto; */
-  transition: transform 0.6s ease;
-  object-fit: cover;
-  object-position: center center ;
-}
-
-/* Hover effects */
-.project-alt-card:hover .image-wrapper::before {
-  background: rgba(20, 40, 60, 0.2);
-  backdrop-filter: blur(0px);
 }
 
 .project-alt-card:hover img {
-  transform: scale(1.05);
-  
+    transform: scale(1.05);
 }
 
-/* RESPONSIVE */
-@media (max-width: 900px) {
-
-    .project-alt-row,
-    .project-alt-row.reverse {
-        flex-direction: column;
-    }
-
-    .project-alt-card img {
-        height: 260px;
-    }
+.image-wrapper {
+    position: relative;
+    overflow: hidden;
 }
 
+.image-wrapper::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(20, 40, 60, 0.75);
+    z-index: 1;
+    transition: background 0.4s ease;
+    backdrop-filter: blur(4px);
+}
 
-/* Start hidden */
+.image-wrapper img {
+    display: block;
+    width: 100%;
+    transition: transform 0.6s ease;
+    object-fit: cover;
+    object-position: center center;
+}
+
+.project-alt-card:hover .image-wrapper::before {
+    background: rgba(20, 40, 60, 0.2);
+    backdrop-filter: blur(0px);
+}
+
+/* ===========================
+   ANIMATIONS
+=========================== */
 .animate-on-scroll {
     opacity: 0;
     transform: translateY(40px);
     transition: all 0.8s ease-out;
 }
 
-/* When visible */
 .animate-on-scroll.show {
     opacity: 1;
     transform: translateY(0);
 }
 
-/* Optional: slide left or right depending on layout */
 .project-alt-row:not(.reverse).animate-on-scroll {
     transform: translateX(-60px);
 }
@@ -293,19 +241,30 @@ section {
     transform: translateX(0);
 }
 
-/*reveal animation*/
 .reveal {
-  opacity: 0;
-  transform: translateY(40px);
-  transition: all 0.7s cubic-bezier(.17,.67,.83,.67);
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.7s cubic-bezier(.17,.67,.83,.67);
 }
 
 .reveal.visible {
-  opacity: 1;
-  transform: translateY(0);
+    opacity: 1;
+    transform: translateY(0);
 }
 
+/* ===========================
+   RESPONSIVE DESIGN
+=========================== */
+@media (max-width: 900px) {
+    .project-alt-row,
+    .project-alt-row.reverse {
+        flex-direction: column;
+    }
 
+    .project-alt-card img {
+        height: 260px;
+    }
+}
 
 /* ===========================
    END OF FILE
