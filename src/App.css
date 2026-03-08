@@ -267,6 +267,20 @@ section {
     }
 }
 
+@media (max-width: 768px) {
+    section {
+        padding: 2rem 1rem;
+    }
+
+    .app-wrapper {
+        padding: 0 0rem;
+    }
+
+    .gallery {
+        padding: 2rem 1rem;
+    }
+}
+
 /* ===========================
    END OF FILE
 =========================== */
