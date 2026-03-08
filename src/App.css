@@ -170,14 +170,15 @@ section {
     overflow: hidden;
     border-radius: 1rem;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    aspect-ratio: 1/1;
+    aspect-ratio: 16/9;
     max-height: 400px;
+    width: 100%;
 }
 
 .project-alt-card img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
     object-position: center center;
     border-radius: 1rem;
     transition: transform 0.3s ease;
