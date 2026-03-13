@@ -11,7 +11,7 @@ const FeaturedProjectRow = ({ title, description, imgUrl, link, reverse }) => {
       className={`project-alt-row p-2 mb-5 reveal ${reverse ? "reverse" : ""}`}
     >
       <div className="project-alt-text">
-        <h2 className="fw-bold">{title}</h2>
+        <h4 className="fw-bold mb-3">{title}</h4>
         <p>
           {description || `Explore our work in ${title.toLowerCase()}, where creativity meets clean design and professional execution.`}
         </p>
