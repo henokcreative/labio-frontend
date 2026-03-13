@@ -11,11 +11,12 @@
 .about-page .hero {
   position: relative;
   min-height: 35vh;
-background: linear-gradient(
+/* background: linear-gradient(
   135deg, 
   rgba(var(--color-primary-rgb), 0.1) 20%, 
   rgba(var(--color-primary-dark-rgb), 0.2) 50%
-);   color: white;
+);    */
+color: white;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -23,9 +24,12 @@ background: linear-gradient(
 }
 
 /* ===== Content Sections ===== */
-.about-page section {
+.hero-content {
   padding: 4rem 2rem;
   animation: fadeInUp 1s ease-out;
+}
+.about-page p, .about-page h3 {
+  animation: fadeInUp 1s ease-out;        
 }
 
 .about-page section:nth-child(2) {
@@ -45,11 +49,11 @@ background: linear-gradient(
   margin: 0 auto;
 }
 
-.about-page section:nth-child(2) h3,
+/* .about-page section:nth-child(2) h3,
 .about-page section:nth-child(2) .blockquote,
 .about-page section:nth-child(2) p {
   max-width: 700px;
-}
+} */
 
 .about-page h2,
 .about-page h3 {
