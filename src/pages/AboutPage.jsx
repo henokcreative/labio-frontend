@@ -2,7 +2,6 @@
 import React from "react";
 import "./AboutPage.css";
 import Hero from "../components/Hero";
-import { Link } from "react-router-dom";
 import FeaturedProjectRow from "../components/landing/FeaturedProjectRow";
 import BrandName from "../components/BrandName";
 
