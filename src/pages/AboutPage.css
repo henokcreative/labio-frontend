@@ -115,7 +115,7 @@ background: linear-gradient(
 /* ===== Projects Section ===== */
 .projects-alt-section {
   padding: 6rem 2rem;
-  background: #f9fafb;
+  /* background: #f9fafb; */
   color: #2d3748;
 }
 
