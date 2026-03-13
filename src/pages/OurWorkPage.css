@@ -1,0 +1,38 @@
+/* ===== Projects Section ===== */
+.projects-alt-section {
+  padding: 6rem 2rem;
+  background: #f9fafb;
+  color: #2d3748;
+}
+
+.projects-alt-section h2 {
+  text-align: center;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 700;
+  margin-bottom: 4rem;
+  color: var(--color-primary-dark);
+  position: relative;
+}
+
+.projects-alt-section h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 4px;
+  background: var(--color-primary);
+  border-radius: 2px;
+}
+
+/* ===== Responsive tweaks ===== */
+@media (max-width: 768px) {
+  .projects-alt-section {
+    padding: 4rem 1rem;
+  }
+
+  .projects-alt-section h2 {
+    margin-bottom: 2rem;
+  }
+}

@@ -9,6 +9,8 @@
     --color-text: #222222;
     --color-muted: #666666;
     --color-light: #f7f7f7;
+    --color-primary-rgb: 99, 102, 241;
+    --color-primary-dark-rgb: 79, 70, 229;
 
     /* Font Sizes */
     --fs-h1: clamp(2rem, 1.6rem + 3.2vw, 3rem);

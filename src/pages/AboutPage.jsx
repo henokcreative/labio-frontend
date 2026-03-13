@@ -3,16 +3,16 @@ import React from "react";
 import "./AboutPage.css";
 import Hero from "../components/Hero";
 import { Link } from "react-router-dom";
-import ProjectsCards from "../components/cards/cards";
+import FeaturedProjectRow from "../components/landing/FeaturedProjectRow";
 import BrandName from "../components/BrandName";
 
 const AboutPage = () => {
   // Correct array name
   const projects = [
-    { title: "Photography", imgUrl: "assets/projects/project1.jpg", link: "/photos" },
-    { title: "Web Design", imgUrl: "assets/projects/project2.jpg", link: "/web-design" },
-    { title: "Videography", imgUrl: "assets/projects/project3.jpg", link: "/videos" },
-    { title: "Print Design", imgUrl: "assets/projects/project4.png", link: "/print-design" },
+    { title: "Photography", imgUrl: "assets/projects/project1.jpg", link: "/photos", description: "Professional scientific photography capturing research moments, laboratory work, and scientific discoveries with precision and artistry." },
+    { title: "Web Design", imgUrl: "assets/projects/project2.jpg", link: "/web-design", description: "Modern, responsive websites and web applications designed specifically for research institutions and scientific communication needs." },
+    { title: "Videography", imgUrl: "assets/projects/project3.jpg", link: "/videos", description: "Compelling video content including research documentaries, educational videos, and promotional materials for scientific projects." },
+    { title: "Print Design", imgUrl: "assets/projects/project4.png", link: "/print-design", description: "High-quality print materials including posters, brochures, presentations, and visual aids for scientific conferences and publications." },
   ];
 
   return (
@@ -22,7 +22,7 @@ const AboutPage = () => {
         subtitle="Digital Print • Photography • Videography • Web Development"
       />
       <section>
-        <h3>Bridging Science and Storytelling</h3>
+        <h3 className="gradient-text">Bridging Science and Storytelling</h3>
         <p className="lead">
           {<BrandName />}creative studio is a multimedia production unit at Turku Bioscience Centre that supports scientists and researchers in communicating their work through clear, engaging, and visually compelling storytelling.
 
@@ -44,18 +44,18 @@ const AboutPage = () => {
       </section>
 
       {/* Featured Projects Section */}
-      <section className="gallery" id="projects">
-        <h2>Featured Projects</h2>
-
-        <div className="gallery-flex">
+      <section className="projects-alt-section" id="projects">
+        <div className="container">
+          <h2 className="text-center mb-5 gradient-text">Featured Projects</h2>
           {projects.map((project, idx) => (
-            <Link key={idx} to={project.link} className="gallery-item">
-              <ProjectsCards
-                title={project.title}
-                imgUrl={project.imgUrl}
-                link={project.link}
-              />
-            </Link>
+            <FeaturedProjectRow
+              key={idx}
+              title={project.title}
+              description={project.description}
+              imgUrl={project.imgUrl}
+              link={project.link}
+              reverse={idx % 2 === 1}
+            />
           ))}
         </div>
       </section>

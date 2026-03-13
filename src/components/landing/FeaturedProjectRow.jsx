@@ -2,7 +2,7 @@
 import { Link } from "react-router-dom";
 import useScrollReveal from "../../hooks/useScrollReveal";
 
-const FeaturedProjectRow = ({ title, imgUrl, link, reverse }) => {
+const FeaturedProjectRow = ({ title, description, imgUrl, link, reverse }) => {
   const ref = useScrollReveal();
 
   return (
@@ -13,19 +13,18 @@ const FeaturedProjectRow = ({ title, imgUrl, link, reverse }) => {
       <div className="project-alt-text">
         <h2 className="fw-bold">{title}</h2>
         <p>
-          Explore our work in {title.toLowerCase()}, where creativity meets
-          clean design and professional execution.
+          {description || `Explore our work in ${title.toLowerCase()}, where creativity meets clean design and professional execution.`}
         </p>
         <Link to={link} className="view-link btn btn-brand">
           View Projects →
         </Link>
       </div>
 
-<Link to={link} className="project-alt-card">
-  <div className="image-wrapper">
-    <img src={imgUrl} alt={title} className="img-fluid" />
-  </div>
-</Link>
+      <Link to={link} className="project-alt-card">
+        <div className="image-wrapper">
+          <img src={imgUrl} alt={title} className="img-fluid" />
+        </div>
+      </Link>
     </div>
   );
 };

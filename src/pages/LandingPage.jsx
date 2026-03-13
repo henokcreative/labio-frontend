@@ -23,16 +23,16 @@ const LandingPage = () => {
     <div className="landing-page">
 
       <Hero
-        title={<h2 className="mb-0"><BrandName showDot={true} /></h2>}
-        subheading="Research Media Production at Turku Bioscience Centre. "
-        subtitle="Digital Print • Photography • Video Production • Web Development • Live Streaming"
-        ctaText="View Our Work"
+        title={<h1 className="mb-0"><BrandName showDot={true} variant="dark"/></h1>}
+        // heading="Research Media Production"
+        subheading="Photography • Video • Web Design • Print • Live Streaming"
+        subtitle="Transforming scientific research into compelling visual stories at Turku Bioscience Centre"
+        ctaText="Explore Our Work"
         ctaLink="#projects"
-        affiliates={ [
-          {name: "TBC", logo: "/assets/logos/tbc-logo.svg", url: "https://bioscience.fi", className: "aff-logo-img" },
-          {name: "utu", logo: "/assets/logos/utu-logo.svg", url: "https://utu.fi", className: "aff-logo-img" },
-          {name: "abo", logo: "/assets/logos/abo-logo.svg", url: "https://abo.fi", className: "aff-logo-img" },
-
+        affiliates={[
+          {name: "TBC", logo: "/assets/logos/tbc-logo.svg", url: "https://bioscience.fi", className: "aff-logo-img"},
+          {name: "UTU", logo: "/assets/logos/utu-logo.svg", url: "https://utu.fi", className: "aff-logo-img"},
+          {name: "ÅBO", logo: "/assets/logos/abo-logo.svg", url: "https://abo.fi", className: "aff-logo-img"},
         ]}
       />
 
@@ -40,16 +40,20 @@ const LandingPage = () => {
 
       <ServicesSection />
 
-      <section className="projects-alt-section col col-md-10 container" id="projects">
-        {projects.map((project, idx) => (
-          <FeaturedProjectRow
-            key={idx}
-            title={project.title}
-            imgUrl={project.imgUrl}
-            link={project.link}
-            reverse={idx % 2 === 1}
-          />
-        ))}
+      <section className="projects-alt-section" id="projects">
+        <div className="container">
+          <h2 className="text-center mb-5">Featured Projects</h2>
+          {projects.map((project, idx) => (
+            <FeaturedProjectRow
+              key={idx}
+              title={project.title}
+              description={project.description}
+              imgUrl={project.imgUrl}
+              link={project.link}
+              reverse={idx % 2 === 1}
+            />
+          ))}
+        </div>
       </section>
 
       <CollabsSlider />
